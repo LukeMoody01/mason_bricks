@@ -1,19 +1,16 @@
-# mason_bricks
+# Mason Bricks
 
-A repository for mason brick templates.
+<p align="center">
+<img src="https://raw.githubusercontent.com/felangel/mason/master/assets/mason_full.png" height="125" alt="mason logo" />
+</p>
 
-### Todo
+A repository for holding all mason brick templates that are uploaded to [BrickHub](https://brickhub.dev/).
 
-- [ ] Add a brick
-  - [ ] Documentation
-  - [ ] Logic
+---
 
-### In Progress
+## Bricks 🧱
 
-- Nothing
-
-### Done ✓
-
-- [x] Create the inital repo files
-- [x] Create the github repository
-- [x] Create a TODO
+| Brick               | description                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------- |
+| [feature_brick](https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/feature_brick)     | A brick to create a feature using best practices and your state management of choice! |
+| In the works... | In the works...                                                                       |
