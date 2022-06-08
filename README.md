@@ -1,10 +1,10 @@
 # mason_bricks
+
 A repository for mason brick templates.
 
 ### Todo
 
-- [ ] Create the inital repo files
-- [ ] Add a brick 
+- [ ] Add a brick
   - [ ] Documentation
   - [ ] Logic
 
@@ -14,5 +14,6 @@ A repository for mason brick templates.
 
 ### Done ✓
 
+- [x] Create the inital repo files
 - [x] Create the github repository
 - [x] Create a TODO
