@@ -10,7 +10,7 @@ A repository for holding all mason brick templates that I have uploaded to [Bric
 
 ## Bricks 🧱
 
-| Brick                                                                                       | description                                                                           |
+| Brick                                                                                       | Description                                                                           |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | [feature_brick](https://brickhub.dev/bricks/feature_brick/0.1.0) | A brick to create a feature using best practices and your state management of choice! |
 | In the works...                                                                             | In the works...                                                                       |
