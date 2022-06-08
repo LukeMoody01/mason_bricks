@@ -1,6 +1,8 @@
 name: feature_brick
 description: A Feature Template
 version: 0.0.1
+repository: https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/feature_brick
+
 vars:
   feature_name:
     type: string
@@ -12,9 +14,6 @@ vars:
     default: bloc
     description: The features state management
     prompt: What is the features state management?
-    values:
-      - bloc
-      - none
   use_equatable:
     type: boolean
     default: true
