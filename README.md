@@ -1,6 +1,6 @@
 # Mason Bricks
 
-<p align="center">
+<p align="left">
 <img src="https://raw.githubusercontent.com/felangel/mason/master/assets/mason_full.png" height="125" alt="mason logo" />
 </p>
 
