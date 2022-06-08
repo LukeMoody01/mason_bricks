@@ -10,18 +10,19 @@ mason make feature_brick --feature_name login --state_management bloc --use_equa
 
 ## Variables ✨
 
-| variable           | description                     | default | type      |
-| ------------------ | ------------------------------- | ------- | --------- |
-| `feature_name`     | The name of the feature         | login   | `string`  |
-| `state_management` | The state management of the app | bloc    | `string`  |
-| `use_equatable`    | Use the equatable package       | true    | `boolean` |
+| variable           | description                     | default | type      | conditional | when       |
+| ------------------ | ------------------------------- | ------- | --------- | ----------- | ---------- |
+| `feature_name`     | The name of the feature         | login   | `string`  | false       | N/A        |
+| `state_management` | The state management of the app | bloc    | `string`  | false       | N/A        |
+| `use_equatable`    | Use the equatable package       | true    | `boolean` | true        | Using Bloc |
 
 ## Output 📦
 
 ```
---feature_name login --state_management bloc --use_equatable true
+--feature_name login --state_management bloc
 ├── login
 │   ├── bloc
+│   │   ├── bloc.dart
 │   │   ├── login_bloc.dart
 │   │   ├── login_event.dart
 │   │   └── login_state.dart
@@ -34,7 +35,21 @@ mason make feature_brick --feature_name login --state_management bloc --use_equa
 ```
 
 ```
---feature_name login --state_management none --use_equatable false
+--feature_name login --state_management provider
+├── login
+│   ├── provider
+│   │   ├── login_provider.dart
+│   │   ├── provider.dart
+│   ├── view
+│   │   └── login_page.dart
+│   ├── widgets
+│   │   └── login_body.dart
+│   └── login.dart
+└── ...
+```
+
+```
+--feature_name login --state_management none
 ├── login
 │   ├── view
 │   │   └── login_page.dart
@@ -44,7 +59,6 @@ mason make feature_brick --feature_name login --state_management bloc --use_equa
 └── ...
 ```
 
-### Todo
+### Roadmap
 
-- [ ] Add Provider as a State Management Option
 - [ ] Add RiverPod as a State Management Option

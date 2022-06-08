@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
-{{#isBloc}}import '../bloc/bloc.dart';{{/isBloc}}
+import 'package:flutter/material.dart';{{#isBloc}}
+import '../bloc/bloc.dart';{{/isBloc}}{{#isProvider}}
+import '../provider/provider.dart';{{/isProvider}}
 import '../widgets/{{feature_name.snakeCase()}}_body.dart';
 
 class {{feature_name.pascalCase()}}Page extends StatelessWidget {
@@ -17,7 +18,17 @@ class {{feature_name.pascalCase()}}Page extends StatelessWidget {
         body: {{feature_name.pascalCase()}}View(),
       ),
     );
-  } {{/isBloc}} {{#isNone}}
+  } {{/isBloc}} {{#isProvider}}
+  @override
+  Widget build(BuildContext context) {
+    return Provider(
+      create: (context) =>
+          ChangeNotifierProvider(create: (_) => {{feature_name.pascalCase()}}Notifier()),
+      child: const Scaffold(
+        body: {{feature_name.pascalCase()}}View(),
+      ),
+    );
+  } {{/isProvider}} {{#isNone}}
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

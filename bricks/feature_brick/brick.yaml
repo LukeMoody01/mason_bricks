@@ -1,6 +1,6 @@
 name: feature_brick
-description: A Feature Template
-version: 0.0.1
+description: A brick to create a feature using best practices and your state management of choice!
+version: 0.0.4
 repository: https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/feature_brick
 
 vars:
@@ -13,9 +13,4 @@ vars:
     type: string
     default: bloc
     description: The features state management
-    prompt: What is the features state management?
-  use_equatable:
-    type: boolean
-    default: true
-    description: Does the app use equatable
-    prompt: Does the app use the equatable package?
+    prompt: What is the features state management? (bloc, provider, none)
