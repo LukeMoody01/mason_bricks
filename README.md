@@ -4,7 +4,7 @@
 <img src="https://raw.githubusercontent.com/felangel/mason/master/assets/mason_full.png" height="125" alt="mason logo" />
 </p>
 
-A repository for holding all mason brick templates that are uploaded to [BrickHub](https://brickhub.dev/).
+A repository for holding all mason brick templates that I have uploaded to [BrickHub](https://brickhub.dev/).
 
 ---
 
