@@ -62,3 +62,6 @@ mason make feature_brick --feature_name login --state_management bloc --use_equa
 ### Roadmap
 
 - [ ] Add RiverPod as a State Management Option
+- [ ] Add Domain Layer Option
+- [ ] Add Models into Domain Layer Option
+- [ ] Add Services Option
