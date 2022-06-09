@@ -28,7 +28,13 @@ class {{feature_name.pascalCase()}}Page extends StatelessWidget {
         body: {{feature_name.pascalCase()}}View(),
       ),
     );
-  } {{/isProvider}} {{#isNone}}
+  } {{/isProvider}} {{#isRiverpod}}
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: {{feature_name.pascalCase()}}View(),
+    );
+  } {{/isRiverpod}} {{#isNone}}
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

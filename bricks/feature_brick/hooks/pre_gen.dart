@@ -1,11 +1,12 @@
 import 'package:mason/mason.dart';
 
 void run(HookContext context) {
-  final isBloc =
-      context.vars['state_management'].toString().toLowerCase() == 'bloc';
-  final isProvider =
-      context.vars['state_management'].toString().toLowerCase() == 'provider';
-  final isNone = !isBloc && !isProvider;
+  final stateManagement =
+      context.vars['state_management'].toString().toLowerCase();
+  final isBloc = stateManagement == 'bloc';
+  final isProvider = stateManagement == 'provider';
+  final isRiverpod = stateManagement == 'riverpod';
+  final isNone = !isBloc && !isProvider && !isRiverpod;
 
   String useEquatable = 'n';
   if (isBloc) {
@@ -19,6 +20,7 @@ void run(HookContext context) {
     ...context.vars,
     'isBloc': isBloc,
     'isProvider': isProvider,
+    'isRiverpod': isRiverpod,
     'isNone': isNone,
     'use_equatable': useEquatable.toLowerCase() == 'y' ? true : false
   };

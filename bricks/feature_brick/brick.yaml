@@ -13,4 +13,4 @@ vars:
     type: string
     default: bloc
     description: The features state management
-    prompt: What is the features state management? (bloc, provider, none)
+    prompt: What is the features state management? (bloc, provider, riverpod, none)

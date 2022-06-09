@@ -1,6 +1,6 @@
 # Feature Brick
 
-A brick to create a feature using best practices and your state management of choice! (Currently only supports bloc or none. See below for future state managements)
+A brick to create a feature using best practices and your state management of choice! Supports bloc, Provider, Riverpod, none
 
 ## How to use 🚀
 
@@ -10,13 +10,13 @@ mason make feature_brick --feature_name login --state_management bloc --use_equa
 
 ## Variables ✨
 
-| variable           | description                     | default | type      | conditional | when       |
+| Variable           | Description                     | Default | Type      | Conditional | When       |
 | ------------------ | ------------------------------- | ------- | --------- | ----------- | ---------- |
 | `feature_name`     | The name of the feature         | login   | `string`  | false       | N/A        |
 | `state_management` | The state management of the app | bloc    | `string`  | false       | N/A        |
 | `use_equatable`    | Use the equatable package       | true    | `boolean` | true        | Using Bloc |
 
-## Output 📦
+## Outputs 📦
 
 ```
 --feature_name login --state_management bloc
@@ -29,7 +29,8 @@ mason make feature_brick --feature_name login --state_management bloc --use_equa
 │   ├── view
 │   │   └── login_page.dart
 │   ├── widgets
-│   │   └── login_body.dart
+│   │   ├── login_body.dart
+│   │   └── widgets.dart
 │   └── login.dart
 └── ...
 ```
@@ -43,7 +44,23 @@ mason make feature_brick --feature_name login --state_management bloc --use_equa
 │   ├── view
 │   │   └── login_page.dart
 │   ├── widgets
-│   │   └── login_body.dart
+│   │   ├── login_body.dart
+│   │   └── widgets.dart
+│   └── login.dart
+└── ...
+```
+
+```
+--feature_name login --state_management riverpod
+├── login
+│   ├── provider
+│   │   ├── login_provider.dart
+│   │   ├── provider.dart
+│   ├── view
+│   │   └── login_page.dart
+│   ├── widgets
+│   │   ├── login_body.dart
+│   │   └── widgets.dart
 │   └── login.dart
 └── ...
 ```
@@ -54,14 +71,15 @@ mason make feature_brick --feature_name login --state_management bloc --use_equa
 │   ├── view
 │   │   └── login_page.dart
 │   ├── widgets
-│   │   └── login_body.dart
+│   │   ├── login_body.dart
+│   │   └── widgets.dart
 │   └── login.dart
 └── ...
 ```
 
 ### Roadmap
 
-- [ ] Add RiverPod as a State Management Option
 - [ ] Add Domain Layer Option
 - [ ] Add Models into Domain Layer Option
 - [ ] Add Services Option
+- [ ] Add ability to chose riverpod provider type

@@ -1,3 +1,8 @@
+# 0.2.0
+
+- Create options for riverpod as state management generation
+- Update documentation to reflect new riverpod changes
+
 # 0.1.0
 
 - Create options for provider as state management generation
