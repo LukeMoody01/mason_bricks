@@ -1,6 +1,8 @@
 name: app_ui
-description: A brick to create a your apps UI package
-version: 0.0.1
+description: A brick to create your apps UI package
+version: 0.0.2
+repository: https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/app_ui
+
 vars:
   project_name:
     default: app

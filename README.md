@@ -10,7 +10,8 @@ A repository for holding all mason brick templates that I have uploaded to [Bric
 
 ## Bricks 🧱
 
-| Brick                                                                                       | Description                                                                           | Version |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------- |
+| Brick                                                            | Description                                                                           | Version |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------- |
 | [feature_brick](https://brickhub.dev/bricks/feature_brick/0.2.0) | A brick to create a feature using best practices and your state management of choice! | 0.2.0   |
-| In the works...                                                                             | In the works...                                                                       | N/A     |
+| [app_ui](https://brickhub.dev/bricks/app_ui/0.0.2)               | A brick to create your apps UI package                                                | 0.0.2   |
+| In the works...                                                  | In the works...                                                                       | N/A     |

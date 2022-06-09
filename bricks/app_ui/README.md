@@ -1,6 +1,6 @@
 # Feature Brick
 
-A brick to create a your apps UI package!
+A brick to create your apps UI package!
 
 ## How to use 🚀
 
