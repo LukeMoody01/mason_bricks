@@ -12,5 +12,5 @@ A repository for holding all mason brick templates that I have uploaded to [Bric
 
 | Brick                                                                                       | Description                                                                           | Version |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------- |
-| [feature_brick](https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/feature_brick) | A brick to create a feature using best practices and your state management of choice! | 0.2.0   |
+| [feature_brick](https://brickhub.dev/bricks/feature_brick/0.2.0) | A brick to create a feature using best practices and your state management of choice! | 0.2.0   |
 | In the works...                                                                             | In the works...                                                                       | N/A     |
