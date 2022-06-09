@@ -1,0 +1,9 @@
+name: app_ui
+description: A brick to create a your apps UI package
+version: 0.0.1
+vars:
+  project_name:
+    default: app
+    type: string
+    description: The project name
+    prompt: What is the project name? (Your classes will be created -> {name}Colors, {name}Theme, etc)
