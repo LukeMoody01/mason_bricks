@@ -1,6 +1,6 @@
 # Feature Brick
 
-A brick to create your apps UI package!
+A brick to create your UI package that holds all your app's Colors, Typography, Layout, Theme, and more!
 
 ## How to use 🚀
 
