@@ -1,4 +1,4 @@
-# Feature Brick
+# App UI
 
 A brick to create your UI package that holds all your app's Colors, Typography, Layout, Theme, and more!
 

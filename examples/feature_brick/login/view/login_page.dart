@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
         body: LoginView(),
       ),
     );
-  }  
+  }
 }
 
 class LoginView extends StatelessWidget {

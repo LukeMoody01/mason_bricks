@@ -1,6 +1,6 @@
 name: app_ui
 description: A brick to create your UI package that holds all your app's Colors, Typography, Layout, Theme, and more!
-version: 0.0.3
+version: 0.0.4
 repository: https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/app_ui
 
 vars:

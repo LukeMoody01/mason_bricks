@@ -1,3 +1,8 @@
+# 0.2.1
+
+- Update state_management variable to use enum
+- Small bug fix with using bloc
+
 # 0.2.0
 
 - Create options for riverpod as state management generation

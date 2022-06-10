@@ -11,5 +11,5 @@ class LoginBody extends StatelessWidget {
         return Text(state.customProperty);
       },
     );
-  }  
+  }
 }

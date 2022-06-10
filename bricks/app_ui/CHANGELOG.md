@@ -1,3 +1,7 @@
+# 0.0.4
+
+- Updates to documentation
+
 # 0.0.3
 
 - More updates to documentation
