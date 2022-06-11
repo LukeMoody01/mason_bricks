@@ -1,7 +1,6 @@
-{{#use_equatable}}import 'package:equatable/equatable.dart';{{/use_equatable}}
-{{#use_json}}
-part '{{model_name.snakeCase()}}.g.dart';{{/use_json}}
+{{#use_equatable}}import 'package:equatable/equatable.dart';{{/use_equatable}}{{#use_json}}
 
+part '{{model_name.snakeCase()}}.g.dart';{{/use_json}}
 
 class {{model_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/use_equatable}} {
   const {{model_name.pascalCase()}}({{#hasProperty1}}
