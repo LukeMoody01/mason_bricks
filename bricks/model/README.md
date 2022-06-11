@@ -2,8 +2,6 @@
 
 A brick to create your model with properties and all the supporting methods, copyWith, to/from json, equatable and more!
 
-This brick currently supports 15 properties!
-
 ## How to use 🚀
 
 ```
@@ -76,5 +74,5 @@ class User extends Equatable {
 
 ### Roadmap
 
-- [ ] Support List Types
+- [x] Support List Types
 - [ ] Support Nested Model Json (Custom Types)

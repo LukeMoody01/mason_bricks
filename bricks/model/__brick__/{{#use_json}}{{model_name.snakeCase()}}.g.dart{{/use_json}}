@@ -1,37 +1,9 @@
 part of '{{model_name.snakeCase()}}.dart';
 
-{{model_name.pascalCase()}} _${{model_name.pascalCase()}}FromJson(Map<String, dynamic> json) => {{model_name.pascalCase()}}({{#hasProperty1}}
-      {{property1Name}}: json['{{property1Name}}'] as {{property1Type}},{{/hasProperty1}}{{#hasProperty2}}
-      {{property2Name}}: json['{{property2Name}}'] as {{property2Type}},{{/hasProperty2}}{{#hasProperty3}}
-      {{property3Name}}: json['{{property3Name}}'] as {{property3Type}},{{/hasProperty3}}{{#hasProperty4}}
-      {{property4Name}}: json['{{property4Name}}'] as {{property4Type}},{{/hasProperty4}}{{#hasProperty5}}
-      {{property5Name}}: json['{{property5Name}}'] as {{property5Type}},{{/hasProperty5}}{{#hasProperty6}}
-      {{property6Name}}: json['{{property6Name}}'] as {{property6Type}},{{/hasProperty6}}{{#hasProperty7}}
-      {{property7Name}}: json['{{property7Name}}'] as {{property7Type}},{{/hasProperty7}}{{#hasProperty8}}
-      {{property8Name}}: json['{{property8Name}}'] as {{property8Type}},{{/hasProperty8}}{{#hasProperty9}}
-      {{property9Name}}: json['{{property9Name}}'] as {{property9Type}},{{/hasProperty9}}{{#hasProperty10}}
-      {{property10Name}}: json['{{property10Name}}'] as {{property10Type}},{{/hasProperty10}}{{#hasProperty11}}
-      {{property11Name}}: json['{{property11Name}}'] as {{property11Type}},{{/hasProperty11}}{{#hasProperty12}}
-      {{property12Name}}: json['{{property12Name}}'] as {{property12Type}},{{/hasProperty12}}{{#hasProperty13}}
-      {{property13Name}}: json['{{property13Name}}'] as {{property13Type}},{{/hasProperty13}}{{#hasProperty14}}
-      {{property14Name}}: json['{{property14Name}}'] as {{property14Type}},{{/hasProperty14}}{{#hasProperty15}}
-      {{property15Name}}: json['{{property15Name}}'] as {{property15Type}},{{/hasProperty15}}
+{{model_name.pascalCase()}} _${{model_name.pascalCase()}}FromJson(Map<String, dynamic> json) => {{model_name.pascalCase()}}({{#properties}}
+      {{name}}: json['{{name}}'] as {{#isList}}{{{type}}}{{/isList}}{{^isList}}{{type}}{{/isList}},{{/properties}}
     );
 
-Map<String, dynamic> _${{model_name.pascalCase()}}ToJson({{model_name.pascalCase()}} instance) => <String, dynamic>{ {{#hasProperty1}}
-      '{{property1Name}}': instance.{{property1Name}},{{/hasProperty1}}{{#hasProperty2}}
-      '{{property2Name}}': instance.{{property2Name}},{{/hasProperty2}}{{#hasProperty3}}
-      '{{property3Name}}': instance.{{property3Name}},{{/hasProperty3}}{{#hasProperty4}}
-      '{{property4Name}}': instance.{{property4Name}},{{/hasProperty4}}{{#hasProperty5}}
-      '{{property5Name}}': instance.{{property5Name}},{{/hasProperty5}}{{#hasProperty6}}
-      '{{property6Name}}': instance.{{property6Name}},{{/hasProperty6}}{{#hasProperty7}}
-      '{{property7Name}}': instance.{{property7Name}},{{/hasProperty7}}{{#hasProperty8}}
-      '{{property8Name}}': instance.{{property8Name}},{{/hasProperty8}}{{#hasProperty9}}
-      '{{property9Name}}': instance.{{property9Name}},{{/hasProperty9}}{{#hasProperty10}}
-      '{{property10Name}}': instance.{{property10Name}},{{/hasProperty10}}{{#hasProperty11}}
-      '{{property11Name}}': instance.{{property11Name}},{{/hasProperty11}}{{#hasProperty12}}
-      '{{property12Name}}': instance.{{property12Name}},{{/hasProperty12}}{{#hasProperty13}}
-      '{{property13Name}}': instance.{{property13Name}},{{/hasProperty13}}{{#hasProperty14}}
-      '{{property14Name}}': instance.{{property14Name}},{{/hasProperty14}}{{#hasProperty15}}
-      '{{property15Name}}': instance.{{property15Name}},{{/hasProperty15}}
+Map<String, dynamic> _${{model_name.pascalCase()}}ToJson({{model_name.pascalCase()}} instance) => <String, dynamic>{ {{#properties}}
+      '{{name}}': insatnce.{{name}},{{/properties}}
     };
