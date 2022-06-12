@@ -1,3 +1,7 @@
+# 0.2.1
+
+- fix: Remove extra .dart suffix on generated file
+
 # 0.2.0
 
 - fix: toJson typo fixed

@@ -1,3 +1,7 @@
 bricks:
+  app_ui:
+    path: bricks/app_ui
   feature_brick:
     path: bricks/feature_brick
+  model:
+    path: bricks/model
