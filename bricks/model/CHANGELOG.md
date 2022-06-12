@@ -1,3 +1,9 @@
+# 0.2.0
+
+- fix: toJson typo fixed
+- feat: Support custom types in to/from Json
+- feat: Update all properties to be required names parameters as standard
+
 # 0.1.2
 
 - feat: Support types with some type parameters when creating a model

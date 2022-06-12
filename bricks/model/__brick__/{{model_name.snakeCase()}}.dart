@@ -3,9 +3,9 @@
 part '{{model_name.snakeCase()}}.g.dart';{{/use_json}}
 
 class {{model_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/use_equatable}} {
-  const {{model_name.pascalCase()}}({{#properties}}
-  this.{{name}},{{/properties}}
-  );
+  const {{model_name.pascalCase()}}({ {{#properties}}
+  required this.{{name}},{{/properties}}
+  });
 {{#properties}}
   final {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{name}};{{/properties}}
 
@@ -14,7 +14,7 @@ class {{model_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/use_equa
     {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}? {{name}},{{/properties}}
   }) {
     return {{model_name.pascalCase()}}({{#properties}}
-      {{name}} ?? this.{{name}},{{/properties}}
+      {{name}}: {{name}} ?? this.{{name}},{{/properties}}
     );
   }{{/use_copywith}}
   {{#use_equatable}}

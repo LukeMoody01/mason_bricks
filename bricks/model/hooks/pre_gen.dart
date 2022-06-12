@@ -1,5 +1,17 @@
 import 'package:mason/mason.dart';
 
+final dataTypes = [
+  'String',
+  'num',
+  'int',
+  'double',
+  'bool',
+  'List',
+  'Map',
+  'dynamic',
+  'Set',
+];
+
 void run(HookContext context) {
   final logger = context.logger;
 
@@ -8,7 +20,7 @@ void run(HookContext context) {
   }
 
   logger.alert(
-      'Format: {propertyName}/{type} eg. id/String, enter "e" to exit adding properties:');
+      'Format: {propertyName}/{dataType} eg. id/String, enter "e" to exit adding properties:');
   final properties = <Map<String, dynamic>>[];
 
   while (true) {
@@ -19,18 +31,22 @@ void run(HookContext context) {
 
     if (!response.contains('/')) {
       logger.alert(
-          'That was not a valid format -> {propertyName}/{type} eg. id/String');
+          'That was not a valid format -> {propertyName}/{dataType} eg. id/String');
       continue;
     }
 
     final splitProperty = response.split('/');
     final propertyName = splitProperty[0];
     final propertyType = splitProperty[1];
+    final hasSpecial = propertyType.toLowerCase().contains('<') ||
+        propertyType.toLowerCase().contains('>');
+    final isCustomDataType = !dataTypes.contains(propertyType) &&
+        !hasSpecial; //TODO(Allow List<CustomType>)
     properties.add({
       'name': propertyName,
       'type': propertyType,
-      'hasSpecial': propertyType.toLowerCase().contains('<') ||
-          propertyType.toLowerCase().contains('>')
+      'hasSpecial': hasSpecial,
+      'isCustomDataType': isCustomDataType
     });
     context.vars = {
       ...context.vars,
