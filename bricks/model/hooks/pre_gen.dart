@@ -20,7 +20,7 @@ void run(HookContext context) {
   }
 
   logger.alert(
-      'Format: {propertyName}/{dataType} eg. id/String, enter "e" to exit adding properties:');
+      'Format: {dataType}/{propertyName} eg. String/id, enter "e" to exit adding properties:');
   final properties = <Map<String, dynamic>>[];
 
   while (true) {
@@ -31,26 +31,49 @@ void run(HookContext context) {
 
     if (!response.contains('/')) {
       logger.alert(
-          'That was not a valid format -> {propertyName}/{dataType} eg. id/String');
+          'That was not a valid format -> {dataType}/{propertyName} eg. String/id');
       continue;
     }
 
     final splitProperty = response.split('/');
-    final propertyName = splitProperty[0];
-    final propertyType = splitProperty[1];
+    final propertyType = splitProperty[0];
+    final propertyName = splitProperty[1];
     final hasSpecial = propertyType.toLowerCase().contains('<') ||
         propertyType.toLowerCase().contains('>');
-    final isCustomDataType = !dataTypes.contains(propertyType) &&
-        !hasSpecial; //TODO(Allow List<CustomType>)
+    final listProperties =
+        _getCustomListProperties(hasSpecial, properties, propertyType);
+    final isCustomDataType = !dataTypes.contains(propertyType) && !hasSpecial;
     properties.add({
       'name': propertyName,
       'type': propertyType,
       'hasSpecial': hasSpecial,
-      'isCustomDataType': isCustomDataType
+      'isCustomDataType': isCustomDataType,
+      ...listProperties,
     });
     context.vars = {
       ...context.vars,
       'properties': properties,
     };
   }
+}
+
+Map<String, dynamic> _getCustomListProperties(bool hasSpecial,
+    List<Map<String, dynamic>> properties, String propertyType) {
+  if (!hasSpecial || !propertyType.contains('List')) {
+    return {
+      'isCustomList': false,
+    };
+  }
+  final startIndex = propertyType.indexOf('<');
+  final endIndex = propertyType.indexOf('>');
+  final listType = propertyType.substring(startIndex + 1, endIndex).trim();
+  if (dataTypes.contains(listType)) {
+    return {
+      'isCustomList': false,
+    };
+  }
+  return {
+    'isCustomList': true,
+    'customListType': listType,
+  };
 }

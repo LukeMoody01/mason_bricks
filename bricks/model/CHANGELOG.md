@@ -1,3 +1,7 @@
+# 0.3.0
+
+- feat: Support Custom List Types for to/fromJson
+
 # 0.2.1
 
 - fix: Remove extra .dart suffix on generated file

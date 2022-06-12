@@ -37,22 +37,22 @@ part 'user.g.dart';
 class User extends Equatable {
   const User({
     required this.name,
-    required this.familyNames,
+    required this.familyMembers,
     required this.family,
   });
 
   final String name;
-  final List<String> familyNames;
+  final List<User> familyMembers;
   final Family family;
 
   User copyWith({
     String? name,
-    List<String>? familyNames,
+    List<User>? familyMembers,
     Family? family,
   }) {
     return User(
       name: name ?? this.name,
-      familyNames: familyNames ?? this.familyNames,
+      familyMembers: familyMembers ?? this.familyMembers,
       family: family ?? this.family,
     );
   }
@@ -60,7 +60,7 @@ class User extends Equatable {
   @override
   List<Object?> get props => [
         name,
-        familyNames,
+        familyMembers,
         family,
       ];
 
@@ -73,19 +73,22 @@ part of 'user.dart';
 
 User _$UserFromJson(Map<String, dynamic> json) => User(
       name: json['name'] as String,
-      familyNames: json['familyNames'] as List<String>,
+      familyMembers: (json['familyMembers'] as List<dynamic>)
+          .map((e) => User.fromJson(e as Map<String, dynamic>))
+          .toList(),
       family: Family.fromJson(json['family'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
       'name': instance.name,
-      'familyNames': instance.familyNames,
+      'familyMembers': instance.familyMembers,
       'family': instance.family,
     };
+
 ```
 
 ### Roadmap
 
-- [ ] Support Custom List Types
+- [x] Support Custom List Types
 - [x] Support List Types
 - [x] Support Nested Model Json (Custom Types)
