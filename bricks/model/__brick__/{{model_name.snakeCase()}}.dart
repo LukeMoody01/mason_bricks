@@ -7,11 +7,11 @@ class {{model_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/use_equa
   this.{{name}},{{/properties}}
   );
 {{#properties}}
-  final {{#isList}}{{{type}}}{{/isList}}{{^isList}}{{type}}{{/isList}} {{name}};{{/properties}}
+  final {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{name}};{{/properties}}
 
 {{#use_copywith}}
   {{model_name.pascalCase()}} copyWith({ {{#properties}}
-    {{#isList}}{{{type}}}{{/isList}}{{^isList}}{{type}}{{/isList}}? {{name}},{{/properties}}
+    {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}? {{name}},{{/properties}}
   }) {
     return {{model_name.pascalCase()}}({{#properties}}
       {{name}} ?? this.{{name}},{{/properties}}

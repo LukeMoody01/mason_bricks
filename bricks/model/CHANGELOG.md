@@ -1,3 +1,8 @@
+# 0.1.2
+
+- feat: Support types with some type parameters when creating a model
+- chore: update pre_gen.dart for readability
+
 # 0.1.1
 
 - fix: Remove extra .dart suffix on generated file
