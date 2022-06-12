@@ -20,7 +20,7 @@ void run(HookContext context) {
   }
 
   logger.alert(
-      'Format: {dataType}/{propertyName} eg. id/String, enter "e" to exit adding properties:');
+      'Format: {dataType}/{propertyName} eg. String/id, enter "e" to exit adding properties:');
   final properties = <Map<String, dynamic>>[];
 
   while (true) {
@@ -31,7 +31,7 @@ void run(HookContext context) {
 
     if (!property.contains('/')) {
       logger.alert(
-          'That was not a valid format -> {dataType}/{propertyName} eg. id/String');
+          'That was not a valid format -> {dataType}/{propertyName} eg. String/id');
       continue;
     }
 
@@ -56,11 +56,11 @@ void run(HookContext context) {
       'isCustomDataType': isCustomDataType,
       ...listProperties,
     });
-    context.vars = {
-      ...context.vars,
-      'properties': properties,
-    };
   }
+  context.vars = {
+    ...context.vars,
+    'properties': properties,
+  };
 }
 
 Map<String, dynamic> _getCustomListProperties(

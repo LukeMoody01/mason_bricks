@@ -5,3 +5,5 @@ bricks:
     path: bricks/feature_brick
   model:
     path: bricks/model
+  service:
+    path: bricks/service
