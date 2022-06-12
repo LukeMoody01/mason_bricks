@@ -1,3 +1,8 @@
+# 0.3.1
+
+- chore: Update alert message to reflect new type/name changes
+- chore: Small updates to property checking
+
 # 0.3.0
 
 - feat: Support Custom List Types for to/fromJson

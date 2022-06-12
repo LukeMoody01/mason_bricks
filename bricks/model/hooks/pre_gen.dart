@@ -20,28 +20,34 @@ void run(HookContext context) {
   }
 
   logger.alert(
-      'Format: {dataType}/{propertyName} eg. String/id, enter "e" to exit adding properties:');
+      'Format: {dataType}/{propertyName} eg. id/String, enter "e" to exit adding properties:');
   final properties = <Map<String, dynamic>>[];
 
   while (true) {
-    final response = logger.prompt(':');
-    if (response.toLowerCase() == 'e') {
+    final property = logger.prompt(':');
+    if (property.toLowerCase() == 'e') {
       break;
     }
 
-    if (!response.contains('/')) {
+    if (!property.contains('/')) {
       logger.alert(
-          'That was not a valid format -> {dataType}/{propertyName} eg. String/id');
+          'That was not a valid format -> {dataType}/{propertyName} eg. id/String');
       continue;
     }
 
-    final splitProperty = response.split('/');
+    if ((property.contains('<') && !property.contains('>')) ||
+        (property.contains('>') && !property.contains('<'))) {
+      logger.alert(
+          'It seems you are missing a < or >, please retype this property');
+      continue;
+    }
+
+    final splitProperty = property.split('/');
     final propertyType = splitProperty[0];
     final propertyName = splitProperty[1];
     final hasSpecial = propertyType.toLowerCase().contains('<') ||
         propertyType.toLowerCase().contains('>');
-    final listProperties =
-        _getCustomListProperties(hasSpecial, properties, propertyType);
+    final listProperties = _getCustomListProperties(hasSpecial, propertyType);
     final isCustomDataType = !dataTypes.contains(propertyType) && !hasSpecial;
     properties.add({
       'name': propertyName,
@@ -57,8 +63,10 @@ void run(HookContext context) {
   }
 }
 
-Map<String, dynamic> _getCustomListProperties(bool hasSpecial,
-    List<Map<String, dynamic>> properties, String propertyType) {
+Map<String, dynamic> _getCustomListProperties(
+  bool hasSpecial,
+  String propertyType,
+) {
   if (!hasSpecial || !propertyType.contains('List')) {
     return {
       'isCustomList': false,
