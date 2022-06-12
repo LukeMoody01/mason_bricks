@@ -14,7 +14,7 @@ mason make feature_brick --feature_name login --state_management bloc --use_equa
 | ------------------ | ------------------------------- | ------- | --------- | ----------- | ---------- |
 | `feature_name`     | The name of the feature         | login   | `string`  | false       | N/A        |
 | `state_management` | The state management of the app | bloc    | `enum`    | false       | N/A        |
-| `use_equatable`    | Use the equatable package       | true    | `boolean` | true        | Using Bloc |
+| `use_equatable`    | Use the equatable package       | true    | `boolean` | true        | Using bloc |
 
 ## Outputs 📦
 

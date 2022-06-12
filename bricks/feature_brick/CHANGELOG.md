@@ -1,3 +1,7 @@
+# 0.2.2
+
+- chore: Update prompt to confirm when asking for equatable
+
 # 0.2.1
 
 - Update state_management variable to use enum

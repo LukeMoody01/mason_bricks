@@ -8,11 +8,11 @@ void run(HookContext context) {
   final isRiverpod = stateManagement == 'riverpod';
   final isNone = !isBloc && !isProvider && !isRiverpod;
 
-  String useEquatable = 'n';
+  bool useEquatable = false;
   if (isBloc) {
-    useEquatable = context.logger.prompt(
+    useEquatable = context.logger.confirm(
       '? Do you want to use equatable with Bloc? (Y/n)',
-      defaultValue: 'Y',
+      defaultValue: true,
     );
   }
 
@@ -22,6 +22,6 @@ void run(HookContext context) {
     'isProvider': isProvider,
     'isRiverpod': isRiverpod,
     'isNone': isNone,
-    'use_equatable': useEquatable.toLowerCase() == 'y' ? true : false
+    'use_equatable': useEquatable
   };
 }
