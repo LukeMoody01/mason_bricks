@@ -2,7 +2,7 @@
 
 A brick to create your model with properties and all the supporting methods, copyWith, to/from json, equatable and more!
 
-This brick supports custom types! (But not custom List Types... yet!)
+This brick supports custom types and custom lists!
 
 ## How to use 🚀
 

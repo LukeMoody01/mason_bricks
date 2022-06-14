@@ -1,3 +1,7 @@
+# 0.3.3
+
+- chore: Small documentation changes
+
 # 0.3.2
 
 - chore: Update alert message to reflect new type/name changes (Last version did not update)
