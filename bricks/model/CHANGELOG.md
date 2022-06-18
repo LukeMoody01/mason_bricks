@@ -1,3 +1,7 @@
+# 0.3.4
+
+- fix: Allow no propreties to be added without errors
+
 # 0.3.3
 
 - chore: Small documentation changes

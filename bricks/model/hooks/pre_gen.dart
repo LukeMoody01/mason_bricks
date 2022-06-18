@@ -16,6 +16,10 @@ void run(HookContext context) {
   final logger = context.logger;
 
   if (!logger.confirm('? Do you want to add properties?', defaultValue: true)) {
+    context.vars = {
+      ...context.vars,
+      'hasProperties': false,
+    };
     return;
   }
 
@@ -60,6 +64,7 @@ void run(HookContext context) {
   context.vars = {
     ...context.vars,
     'properties': properties,
+    'hasProperties': properties.isNotEmpty,
   };
 }
 

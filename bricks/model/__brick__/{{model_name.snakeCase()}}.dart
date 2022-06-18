@@ -3,16 +3,15 @@
 part '{{model_name.snakeCase()}}.g.dart';{{/use_json}}
 
 class {{model_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/use_equatable}} {
-  const {{model_name.pascalCase()}}({ {{#properties}}
+  const {{model_name.pascalCase()}}({{#hasProperties}}{ {{#properties}}
   required this.{{name}},{{/properties}}
-  });
+  }{{/hasProperties}});
 {{#properties}}
   final {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{name}};{{/properties}}
-
 {{#use_copywith}}
-  {{model_name.pascalCase()}} copyWith({ {{#properties}}
+  {{model_name.pascalCase()}} copyWith({{#hasProperties}}{ {{#properties}}
     {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}? {{name}},{{/properties}}
-  }) {
+  }{{/hasProperties}}) {
     return {{model_name.pascalCase()}}({{#properties}}
       {{name}}: {{name}} ?? this.{{name}},{{/properties}}
     );
