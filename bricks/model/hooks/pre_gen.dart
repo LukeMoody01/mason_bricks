@@ -15,7 +15,10 @@ final dataTypes = [
 void run(HookContext context) {
   final logger = context.logger;
 
-  if (!logger.confirm('? Do you want to add properties?', defaultValue: true)) {
+  if (!logger.confirm(
+    '? Do you want to add properties to your model?',
+    defaultValue: true,
+  )) {
     context.vars = {
       ...context.vars,
       'hasProperties': false,
