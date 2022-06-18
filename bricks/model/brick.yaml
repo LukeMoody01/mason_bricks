@@ -1,6 +1,6 @@
 name: model
 description: A brick to create your model with properties and all the supporting methods, copyWith, to/from json, equatable and more!
-version: 0.3.4
+version: 0.3.5
 repository: https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/model
 
 vars:

@@ -1,3 +1,7 @@
+# 0.3.5
+
+- feat: Add documentation for generated model
+
 # 0.3.4
 
 - fix: Allow no propreties to be added without errors

@@ -10,6 +10,7 @@ final dataTypes = [
   'Map',
   'dynamic',
   'Set',
+  'DateTime',
 ];
 
 void run(HookContext context) {
