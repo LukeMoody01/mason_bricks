@@ -42,7 +42,7 @@ Future<String> _runModelBrick(
       '${Directory.current.path..replaceAll(RegExp(r"'"), '')}\\$recasedPackageName\\lib\\src\\models';
   final directory = Directory(modelsDirectory);
   final generator = await MasonGenerator.fromBrick(
-    Brick.version(name: 'model', version: '0.3.4'),
+    Brick.version(name: 'model', version: '0.3.5'),
   );
 
   final modelName = context.logger.prompt(

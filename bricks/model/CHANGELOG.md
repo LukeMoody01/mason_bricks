@@ -1,3 +1,7 @@
+# 0.3.6
+
+- chore: Add documentation to reflect new model generation
+
 # 0.3.5
 
 - feat: Add documentation for generated model

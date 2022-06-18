@@ -1,3 +1,7 @@
+# 0.0.5
+
+- chore: Update model version to latest
+
 # 0.0.4
 
 - chore: Update documentation

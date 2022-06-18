@@ -34,17 +34,30 @@ import 'package:equatable/equatable.dart';
 
 part 'user.g.dart';
 
+/// {@template user}
+/// User description
+/// {@endtemplate}
 class User extends Equatable {
+  /// {@macro user}
   const User({
     required this.name,
     required this.familyMembers,
     required this.family,
   });
 
+  /// Creates a User from Json map
+  factory User.fromJson(Map<String, dynamic> data) => _$UserFromJson(data);
+
+  /// A description for name
   final String name;
+
+  /// A description for familyMembers
   final List<User> familyMembers;
+
+  /// A description for family
   final Family family;
 
+  /// Creates a copy of the current User with property changes
   User copyWith({
     String? name,
     List<User>? familyMembers,
@@ -64,7 +77,7 @@ class User extends Equatable {
         family,
       ];
 
-  factory User.fromJson(Map<String, dynamic> data) => _$UserFromJson(data);
+  /// Creates a Json map from a User
   Map<String, dynamic> toJson() => _$UserToJson(this);
 }
 

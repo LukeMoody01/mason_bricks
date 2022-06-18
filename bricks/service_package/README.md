@@ -22,7 +22,7 @@ mason make service_package --package_name "authentication repository" --package_
 | Brick                                                | Version |
 | ---------------------------------------------------- | ------- |
 | [service](https://brickhub.dev/bricks/service/0.0.3) | 0.0.3   |
-| [model](https://brickhub.dev/bricks/model/0.3.4)     | 0.3.4   |
+| [model](https://brickhub.dev/bricks/model/0.3.5)     | 0.3.5   |
 
 ## Outputs 📦
 
