@@ -28,7 +28,6 @@ mason make service_package --package_name "authentication repository" --package_
 
 ```
 --package_name "authentication repository" --package_description "Authentication Package"
---project_name app
 ├── authentication_repository
 │   ├── lib
 │   │   ├── src

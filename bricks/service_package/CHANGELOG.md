@@ -1,3 +1,7 @@
+# 0.0.4
+
+- chore: Update documentation
+
 # 0.0.3
 
 - chore: Update test names

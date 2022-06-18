@@ -1,6 +1,6 @@
 name: service_package
 description: A brick to create your service package including methods, models, tests, and more!
-version: 0.0.3
+version: 0.0.4
 repository: https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/service_package
 
 vars:
