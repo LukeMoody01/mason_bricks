@@ -17,7 +17,10 @@ void run(HookContext context) {
     'isNone': isNone,
   };
 
-  if (!logger.confirm('? Do you want to add methods?', defaultValue: true)) {
+  if (!logger.confirm(
+    '? Do you want to add methods to your service?',
+    defaultValue: true,
+  )) {
     return;
   }
 

@@ -1,6 +1,6 @@
 name: service
 description: A brick to create your service and interface with your defined methods. With optional singleton handling!
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/service
 
 vars:

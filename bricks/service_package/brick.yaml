@@ -1,0 +1,16 @@
+name: service_package
+description: A brick to create your service package including methods, models, tests, and more!
+version: 0.0.3
+repository: https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/service_package
+
+vars:
+  package_name:
+    default: data repository
+    type: string
+    description: The name of the package
+    prompt: What is the packages name?
+  package_description:
+    default: A default package description
+    type: string
+    description: The package description
+    prompt: What is the packages description?
