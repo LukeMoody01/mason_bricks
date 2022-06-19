@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';{{#isBloc}}
-import '../bloc/bloc.dart';{{/isBloc}}{{#isProvider}}
+import '../bloc/bloc.dart';{{/isBloc}}{{#isCubit}}
+import '../cubit/cubit.dart';{{/isCubit}}{{#isProvider}}
 import '../provider/provider.dart';{{/isProvider}}
 import '../widgets/{{feature_name.snakeCase()}}_body.dart';
 
+/// {@template {{feature_name.snakeCase()}}_page}
+/// A description for {{feature_name.pascalCase()}}Page
+/// {@endtemplate}
 class {{feature_name.pascalCase()}}Page extends StatelessWidget {
+  /// {@macro {{feature_name.snakeCase()}}_page}
   const {{feature_name.pascalCase()}}Page({Key? key}) : super(key: key);
 
+  /// The static route for {{feature_name.pascalCase()}}Page
   static Route<dynamic> route() {
     return MaterialPageRoute<dynamic>(builder: (_) => const {{feature_name.pascalCase()}}Page());
   }
@@ -18,7 +24,16 @@ class {{feature_name.pascalCase()}}Page extends StatelessWidget {
         body: {{feature_name.pascalCase()}}View(),
       ),
     );
-  } {{/isBloc}} {{#isProvider}}
+  } {{/isBloc}}{{#isCubit}}
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => {{feature_name.pascalCase()}}Cubit(),
+      child: const Scaffold(
+        body: {{feature_name.pascalCase()}}View(),
+      ),
+    );
+  } {{/isCubit}} {{#isProvider}}
   @override
   Widget build(BuildContext context) {
     return Provider(
@@ -43,7 +58,11 @@ class {{feature_name.pascalCase()}}Page extends StatelessWidget {
   } {{/isNone}}
 }
 
+/// {@template {{feature_name.snakeCase()}}_view}
+/// Displays the Body of {{feature_name.pascalCase()}}View
+/// {@endtemplate}
 class {{feature_name.pascalCase()}}View extends StatelessWidget {
+  /// {@macro {{feature_name.snakeCase()}}_view}
   const {{feature_name.pascalCase()}}View({Key? key}) : super(key: key);
 
   @override

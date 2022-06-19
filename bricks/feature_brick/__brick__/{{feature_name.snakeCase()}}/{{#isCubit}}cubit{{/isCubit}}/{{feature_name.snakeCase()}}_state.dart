@@ -1,10 +1,10 @@
-part of '{{feature_name.snakeCase()}}_bloc.dart';
+part of '{{feature_name.snakeCase()}}_cubit.dart';
 
-/// {@template {{feature_name.snakeCase()}}_state}
+/// {@template {{{feature_name.snakeCase()}}}}
 /// {{feature_name.pascalCase()}}State description
 /// {@endtemplate}
 class {{feature_name.pascalCase()}}State{{#use_equatable}} extends Equatable{{/use_equatable}} {
-  /// {@macro {{feature_name.snakeCase()}}_state}
+  /// {@macro {{{feature_name.snakeCase()}}}}
   const {{feature_name.pascalCase()}}State({
     this.customProperty = 'Default Value',
   });
@@ -24,7 +24,6 @@ class {{feature_name.pascalCase()}}State{{#use_equatable}} extends Equatable{{/u
     );
   }
 }
-
 /// {@template {{feature_name.snakeCase()}}_initial}
 /// The initial state of {{feature_name.pascalCase()}}State
 /// {@endtemplate}
