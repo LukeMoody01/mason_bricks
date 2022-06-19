@@ -24,23 +24,23 @@ void run(HookContext context) {
     return;
   }
 
-  logger.alert(
-      'Format: {returnType}/{methodName} eg. String/myMethod, enter "e" to exit adding properties:');
+  logger.alert(lightYellow.wrap('enter "e" to exit adding methods'));
+  logger.alert('Format: returnType methodName e.g, String myMethod:');
   final methods = <Map<String, dynamic>>[];
 
   while (true) {
-    final property = logger.prompt(':');
-    if (property.toLowerCase() == 'e') {
+    final method = logger.prompt(':').replaceAll(RegExp('\\s+'), ' ').trim();
+    if (method.toLowerCase() == 'e') {
       break;
     }
 
-    if (!property.contains('/')) {
+    if (!method.contains(' ')) {
       logger.alert(
-          'That was not a valid format -> {returnType}/{methodName} eg. String/myMethod');
+          'That was not a valid format -> returnType methodName e.g, String myMethod');
       continue;
     }
 
-    final splitProperty = property.split('/');
+    final splitProperty = method.split(' ');
     final propertyType = splitProperty[0];
     final propertyName = splitProperty[1];
     methods.add({
