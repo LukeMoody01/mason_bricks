@@ -99,9 +99,3 @@ Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
     };
 
 ```
-
-### Roadmap
-
-- [x] Support Custom List Types
-- [x] Support List Types
-- [x] Support Nested Model Json (Custom Types)
