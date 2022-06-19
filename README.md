@@ -27,12 +27,16 @@ A collection of bricks that enable developers to be more productive when writing
 
 ## Documentation
 
-  - [Model](https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/model)
-  - [Feature Brick](https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/feature_brick)
-  - [App UI](https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/app_ui)
-  - [Service](https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/service)
-  - [Service Package](https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/service_package)
+- [Model](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/model)
+- [Feature Brick](https://github.com/LukeMoody01/mason_bricks/master/main/bricks/feature_brick)
+- [App UI](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/app_ui)
+- [Service](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/service)
+- [Service Package](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/service_package)
 
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/LukeMoody01/mason_bricks/tree/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Maintainers
+
 - [Luke Moody](https://github.com/LukeMoody01)
