@@ -27,19 +27,19 @@ void run(HookContext context) {
     return;
   }
 
-  logger.alert(
-      'Format: {dataType}/{propertyName} eg. String/id, enter "e" to exit adding properties:');
+  logger.alert(lightYellow.wrap('enter "e" to exit adding properties'));
+  logger.alert('Format: dataType propertyName e.g, String myProperty:');
   final properties = <Map<String, dynamic>>[];
 
   while (true) {
-    final property = logger.prompt(':');
+    final property = logger.prompt(':').replaceAll(RegExp('\\s+'), ' ').trim();
     if (property.toLowerCase() == 'e') {
       break;
     }
 
-    if (!property.contains('/')) {
+    if (!property.contains(' ')) {
       logger.alert(
-          'That was not a valid format -> {dataType}/{propertyName} eg. String/id');
+          'That was not a valid format -> dataType propertyName e.g, String myProperty');
       continue;
     }
 
@@ -50,7 +50,7 @@ void run(HookContext context) {
       continue;
     }
 
-    final splitProperty = property.split('/');
+    final splitProperty = property.split(' ');
     final propertyType = splitProperty[0];
     final propertyName = splitProperty[1];
     final hasSpecial = propertyType.toLowerCase().contains('<') ||

@@ -1,3 +1,7 @@
+# 0.3.7
+
+- feat: Change model format to split on ' ' instead of '/' making it easier for developers to type properties
+
 # 0.3.6
 
 - chore: Add documentation to reflect new model generation
