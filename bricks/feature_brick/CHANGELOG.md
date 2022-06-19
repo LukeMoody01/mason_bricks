@@ -1,3 +1,8 @@
+# 0.3.0
+
+- feat: cubit option for feature_brick
+- feat: Add more documentation for generated files
+
 # 0.2.2
 
 - chore: Update prompt to confirm when asking for equatable

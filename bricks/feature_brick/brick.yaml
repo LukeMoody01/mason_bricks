@@ -1,6 +1,6 @@
 name: feature_brick
 description: A brick to create a feature using best practices and your state management of choice!
-version: 0.2.2
+version: 0.3.0
 repository: https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/feature_brick
 
 vars:
@@ -16,6 +16,7 @@ vars:
     prompt: What is the features state management?
     values:
       - bloc
+      - cubit
       - provider
       - riverpod
       - none

@@ -1,19 +1,34 @@
 import 'package:flutter/material.dart';{{#isBloc}}
-import '../bloc/bloc.dart';{{/isBloc}}{{#isProvider}}
+import '../bloc/bloc.dart';{{/isBloc}}{{#isCubit}}
+import '../cubit/cubit.dart';{{/isCubit}}{{#isProvider}}
 import '../provider/provider.dart';{{/isProvider}}{{#isRiverpod}}
 import '../provider/provider.dart';{{/isRiverpod}}
 
-class {{feature_name.pascalCase()}}Body {{#isBloc}}extends StatelessWidget{{/isBloc}}{{#isProvider}}extends StatelessWidget{{/isProvider}}{{#isNone}}extends StatelessWidget{{/isNone}}{{#isRiverpod}}extends ConsumerWidget{{/isRiverpod}} {
+/// {@template {{feature_name.snakeCase()}}_body}
+/// Body of the {{feature_name.pascalCase()}}Page.
+///
+/// Add what it does
+/// {@endtemplate}
+class {{feature_name.pascalCase()}}Body {{#isBloc}}extends StatelessWidget{{/isBloc}}{{#isCubit}}extends StatelessWidget{{/isCubit}}{{#isProvider}}extends StatelessWidget{{/isProvider}}{{#isNone}}extends StatelessWidget{{/isNone}}{{#isRiverpod}}extends ConsumerWidget{{/isRiverpod}} {
+  /// {@macro {{feature_name.snakeCase()}}_body}
   const {{feature_name.pascalCase()}}Body({Key? key}) : super(key: key);
 {{#isBloc}}
   @override
-  Widget build(BuildContext context{{#isRiverpod}}, WidgetRef ref{{/isRiverpod}}) {
+  Widget build(BuildContext context) {
     return BlocBuilder<{{feature_name.pascalCase()}}Bloc, {{feature_name.pascalCase()}}State>(
       builder: (context, state) {
         return Text(state.customProperty);
       },
     );
-  } {{/isBloc}}{{#isProvider}}
+  } {{/isBloc}}{{#isCubit}}
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<{{feature_name.pascalCase()}}Cubit, {{feature_name.pascalCase()}}State>(
+      builder: (context, state) {
+        return Text(state.customProperty);
+      },
+    );
+  } {{/isCubit}}{{#isProvider}}
   @override
   Widget build(BuildContext context) {
     return Consumer<{{feature_name.pascalCase()}}Notifier>(
