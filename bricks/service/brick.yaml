@@ -1,6 +1,6 @@
 name: service
 description: A brick to create your service and interface with your defined methods. With optional singleton handling!
-version: 0.0.3
+version: 0.0.4
 repository: https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/service
 
 vars:
@@ -8,7 +8,7 @@ vars:
     default: service
     type: string
     description: The name of the service
-    prompt: What is the services name? (Whatever you type will be outputted in snake_case)
+    prompt: What is the services name?
   singleton_type:
     type: enum
     default: static-instance-singleton

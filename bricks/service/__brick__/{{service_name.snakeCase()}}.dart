@@ -8,17 +8,20 @@ part 'i{{service_name.snakeCase()}}.dart';
 class {{service_name.pascalCase()}} implements I{{service_name.pascalCase()}} { {{#isNone}}
   /// {@macro {{{service_name.snakeCase()}}}}
   const {{service_name.pascalCase()}}();{{/isNone}}{{#isFactory}}
-  const {{service_name.pascalCase()}}._();
-  static final {{service_name.pascalCase()}} _instance = {{service_name.pascalCase()}}._();
-
+  /// {@macro {{{service_name.snakeCase()}}}}
   factory {{service_name.pascalCase()}}() {
     return _instance;
-  }{{/isFactory}}{{#isInstance}}
+  }
+
   const {{service_name.pascalCase()}}._();
-  static final {{service_name.pascalCase()}} instance = {{service_name.pascalCase()}}._();{{/isInstance}}{{#isInstanceLazy}}
+  static const {{service_name.pascalCase()}} _instance = {{service_name.pascalCase()}}._();{{/isFactory}}{{#isInstance}}
+  const {{service_name.pascalCase()}}._();
+  /// {@macro {{{service_name.snakeCase()}}}}
+  static const {{service_name.pascalCase()}} instance = const {{service_name.pascalCase()}}._();{{/isInstance}}{{#isInstanceLazy}}
   const {{service_name.pascalCase()}}._();
   static {{service_name.pascalCase()}}? _instance;
-  static {{service_name.pascalCase()}} get instance => _instance ??= {{service_name.pascalCase()}}._();{{/isInstanceLazy}}
+  /// {@macro {{{service_name.snakeCase()}}}}
+  static {{service_name.pascalCase()}} get instance => _instance ??= const {{service_name.pascalCase()}}._();{{/isInstanceLazy}}
 {{#methods}}
   @override
   FutureOr<{{{type}}}> {{name}}() async {
