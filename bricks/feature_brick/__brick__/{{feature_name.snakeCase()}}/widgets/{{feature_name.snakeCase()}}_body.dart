@@ -20,7 +20,7 @@ class {{feature_name.pascalCase()}}Body {{#isBloc}}extends StatelessWidget{{/isB
         return Text(state.customProperty);
       },
     );
-  } {{/isBloc}}{{#isCubit}}
+  }{{/isBloc}}{{#isCubit}}
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<{{feature_name.pascalCase()}}Cubit, {{feature_name.pascalCase()}}State>(
@@ -28,7 +28,7 @@ class {{feature_name.pascalCase()}}Body {{#isBloc}}extends StatelessWidget{{/isB
         return Text(state.customProperty);
       },
     );
-  } {{/isCubit}}{{#isProvider}}
+  }{{/isCubit}}{{#isProvider}}
   @override
   Widget build(BuildContext context) {
     return Consumer<{{feature_name.pascalCase()}}Notifier>(
@@ -36,14 +36,14 @@ class {{feature_name.pascalCase()}}Body {{#isBloc}}extends StatelessWidget{{/isB
         return Text(state.count.toString());
       },
     );
-  } {{/isProvider}} {{#isRiverpod}}
+  }{{/isProvider}}{{#isRiverpod}}
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final count = ref.watch({{feature_name.camelCase()}}Provider);
     return Text(count.toString());
-  } {{/isRiverpod}} {{#isNone}}
+  }{{/isRiverpod}}{{#isNone}}
   @override
   Widget build(BuildContext context) {
     return const Text('{{feature_name.pascalCase()}}Page');
-  } {{/isNone}}
+  }{{/isNone}}
 }
