@@ -5,6 +5,16 @@ title: "feat: "
 labels: feature
 ---
 
+**Brick**
+
+<!--- Put an `x` in all the boxes that apply: -->
+
+- [ ] model
+- [ ] feature_brick
+- [ ] app_ui
+- [ ] service
+- [ ] service_package
+
 **Description**
 
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]

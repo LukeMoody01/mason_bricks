@@ -6,6 +6,16 @@
   Please look at the following checklist to ensure that your PR can be accepted quickly:
 -->
 
+## Brick
+
+<!--- Put an `x` in all the boxes that apply: -->
+
+- [ ] model
+- [ ] feature_brick
+- [ ] app_ui
+- [ ] service
+- [ ] service_package
+
 ## Status
 
 **READY/IN DEVELOPMENT/HOLD**
