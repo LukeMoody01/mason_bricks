@@ -1,3 +1,7 @@
+# 0.4.0
+
+- feat: Update imports to be relative
+
 # 0.3.0
 
 - feat: cubit option for feature_brick

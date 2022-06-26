@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';{{#isBloc}}
-import '../bloc/bloc.dart';{{/isBloc}}{{#isCubit}}
-import '../cubit/cubit.dart';{{/isCubit}}{{#isProvider}}
-import '../provider/provider.dart';{{/isProvider}}{{#isRiverpod}}
-import '../provider/provider.dart';{{/isRiverpod}}
+import 'package:{{{fullPath}}}/bloc/bloc.dart';{{/isBloc}}{{#isCubit}}
+import 'package:{{{fullPath}}}/cubit/cubit.dart';{{/isCubit}}{{#isProvider}}
+import 'package:{{{fullPath}}}/provider/provider.dart';{{/isProvider}}{{#isRiverpod}}
+import 'package:{{{fullPath}}}/provider/provider.dart';{{/isRiverpod}}
 
 /// {@template {{feature_name.snakeCase()}}_body}
 /// Body of the {{feature_name.pascalCase()}}Page.
