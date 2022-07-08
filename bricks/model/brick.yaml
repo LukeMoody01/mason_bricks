@@ -24,3 +24,11 @@ vars:
     type: boolean
     description: Has Json methods
     prompt: Does this model use json?
+  model_generator:
+    type: enum
+    default: none
+    description: The generator used in the model
+    prompt: What is the generator that should be used in model?
+    values:
+      - freezed
+      - none

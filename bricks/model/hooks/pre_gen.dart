@@ -16,6 +16,10 @@ final dataTypes = [
 void run(HookContext context) {
   final logger = context.logger;
 
+  final modelGenerator = context.vars["model_generator"].toString().toLowerCase();
+  final isFreezed = modelGenerator == 'freezed';
+  final isNone = !isFreezed;
+
   if (!logger.confirm(
     '? Do you want to add properties to your model?',
     defaultValue: true,
@@ -23,6 +27,8 @@ void run(HookContext context) {
     context.vars = {
       ...context.vars,
       'hasProperties': false,
+      'isFreezed': isFreezed,
+      'isNone': isNone,
     };
     return;
   }
@@ -69,6 +75,8 @@ void run(HookContext context) {
     ...context.vars,
     'properties': properties,
     'hasProperties': properties.isNotEmpty,
+    'isFreezed': isFreezed,
+    'isNone': isNone,
   };
 }
 
