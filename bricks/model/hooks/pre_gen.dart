@@ -16,7 +16,7 @@ final dataTypes = [
 void run(HookContext context) {
   final logger = context.logger;
 
-  final modelGenerator = context.vars["model_generator"].toString().toLowerCase();
+  final modelGenerator = context.vars["model_generator_mode"].toString().toLowerCase();
   final isFreezed = modelGenerator == 'freezed';
   final isNone = !isFreezed;
 

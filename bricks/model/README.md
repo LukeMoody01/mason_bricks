@@ -7,19 +7,19 @@ This brick supports custom types and custom lists!
 ## How to use 🚀
 
 ```
-mason make model --model_name user --use_copywith true --use_equatable true --use_json true --model_generator freezed
+mason make model --model_name user --use_copywith true --use_equatable true --use_json true --model_generator_mode freezed
 ```
 
 ## Variables ✨
 
-| Variable          | Description                      | Default | Type      |
-| ----------------  | -------------------------------- | ------- | --------- |
-| `model_name`      | The name of the model            | model   | `string`  |
-| `use_copywith`    | Create copyWith method           | true    | `boolean` |
-| `use_equatable`   | Creates the equatable overide    | true    | `boolean` |
-| `use_json`        | Creates the from/to json methods | true    | `boolean` |
-| `add_properties`  | Add properties                   | true    | `boolean` |
-| `model_generator` | The generator used in the model  | none    | `enum`    |
+| Variable               | Description                      | Default | Type      |
+| ----------------       | -------------------------------- | ------- | --------- |
+| `model_name`           | The name of the model            | model   | `string`  |
+| `use_copywith`         | Create copyWith method           | true    | `boolean` |
+| `use_equatable`        | Creates the equatable overide    | true    | `boolean` |
+| `use_json`             | Creates the from/to json methods | true    | `boolean` |
+| `add_properties`       | Add properties                   | true    | `boolean` |
+| `model_generator_mode` | The generator used in the model  | none    | `enum`    |
 
 ## Outputs 📦
 
