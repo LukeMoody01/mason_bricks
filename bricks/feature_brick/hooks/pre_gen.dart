@@ -6,21 +6,24 @@ import 'package:yaml/yaml.dart';
 Future run(HookContext context) async {
   final logger = context.logger;
 
-  final stateManagement =
-      context.vars['state_management'].toString().toLowerCase();
+  final stateManagement = context.vars['state_management'].toString().toLowerCase();
   final isBloc = stateManagement == 'bloc';
   final isCubit = stateManagement == 'cubit';
   final isProvider = stateManagement == 'provider';
   final isRiverpod = stateManagement == 'riverpod';
   final isNone = !isBloc && !isCubit && !isProvider && !isRiverpod;
 
-  bool useEquatable = false;
-  if (isBloc || isCubit) {
-    useEquatable = context.logger.confirm(
-      '? Do you want to use equatable with your $stateManagement? (Y/n)',
-      defaultValue: true,
-    );
-  }
+  final decoratorAnswer = (isBloc || isCubit)
+      ? logger.chooseOne(
+          '? Would you like to augment your files?',
+          choices: [
+            'No thanks',
+            'Use Equatable',
+            if (isBloc) 'Use Freezed',
+          ],
+          defaultValue: 'None',
+        )
+      : 'None';
 
   final directory = Directory.current.path;
   List<String> folders;
@@ -32,8 +35,7 @@ Future run(HookContext context) async {
     }
     final libIndex = folders.indexWhere((folder) => folder == 'lib');
     final featurePath = folders.sublist(libIndex + 1, folders.length).join('/');
-    final pubSpecFile =
-        File('${folders.sublist(0, libIndex).join('/')}/pubspec.yaml');
+    final pubSpecFile = File('${folders.sublist(0, libIndex).join('/')}/pubspec.yaml');
     final content = await pubSpecFile.readAsString();
     final yamlMap = loadYaml(content);
     final packageName = yamlMap['name'];
@@ -44,14 +46,16 @@ Future run(HookContext context) async {
 
     context.vars = {
       ...context.vars,
-      'fullPath': ('$packageName/$featurePath/${context.vars['feature_name']}')
-          .replaceAll('//', '/'),
+      'packageName': packageName,
+      'fullPath':
+          ('$packageName/$featurePath/${context.vars['feature_name']}').replaceAll('//', '/'),
       'isBloc': isBloc,
       'isCubit': isCubit,
       'isProvider': isProvider,
       'isRiverpod': isRiverpod,
       'isNone': isNone,
-      'use_equatable': useEquatable
+      'use_equatable': decoratorAnswer == 'Use Equatable',
+      'use_freezed': decoratorAnswer == 'Use Freezed'
     };
   } on RangeError catch (_) {
     logger.alert(
