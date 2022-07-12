@@ -9,7 +9,7 @@ import 'package:{{{fullPath}}}/widgets/{{feature_name.snakeCase()}}_body.dart';
 /// {@endtemplate}
 class {{feature_name.pascalCase()}}Page extends StatelessWidget {
   /// {@macro {{feature_name.snakeCase()}}_page}
-  const {{feature_name.pascalCase()}}Page({Key? key}) : super(key: key);
+  const {{feature_name.pascalCase()}}Page({super.key});
 
   /// The static route for {{feature_name.pascalCase()}}Page
   static Route<dynamic> route() {
@@ -63,7 +63,7 @@ class {{feature_name.pascalCase()}}Page extends StatelessWidget {
 /// {@endtemplate}
 class {{feature_name.pascalCase()}}View extends StatelessWidget {
   /// {@macro {{feature_name.snakeCase()}}_view}
-  const {{feature_name.pascalCase()}}View({Key? key}) : super(key: key);
+  const {{feature_name.pascalCase()}}View({super.key});
 
   @override
   Widget build(BuildContext context) {
