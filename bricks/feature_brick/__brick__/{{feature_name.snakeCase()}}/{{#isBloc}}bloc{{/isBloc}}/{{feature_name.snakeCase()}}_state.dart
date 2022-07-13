@@ -1,4 +1,4 @@
-part of '{{feature_name.snakeCase()}}_bloc.dart';
+{{^use_freezed}}part of '{{feature_name.snakeCase()}}_bloc.dart';
 
 /// {@template {{feature_name.snakeCase()}}_state}
 /// {{feature_name.pascalCase()}}State description
@@ -31,4 +31,14 @@ class {{feature_name.pascalCase()}}State{{#use_equatable}} extends Equatable{{/u
 class {{feature_name.pascalCase()}}Initial extends {{feature_name.pascalCase()}}State {
   /// {@macro {{feature_name.snakeCase()}}_initial}
   const {{feature_name.pascalCase()}}Initial() : super();
-}
+}{{/use_freezed}}{{#use_freezed}}import 'package:freezed_annotation/freezed_annotation.dart';
+
+part '{{feature_name.snakeCase()}}_state.freezed.dart';
+
+@freezed
+class {{feature_name.pascalCase()}}State with _${{feature_name.pascalCase()}}State {
+  const factory {{feature_name.pascalCase()}}State.initial({
+    required String id,
+    @Default(0) int num,
+  }) = {{feature_name.pascalCase()}}Initial;
+}{{/use_freezed}}
