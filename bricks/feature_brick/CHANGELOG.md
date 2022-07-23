@@ -1,7 +1,3 @@
-# 0.5.0
-
-- feat: Generate tests with the feature (100% code coverage) - Currently Bloc, Cubit, None
-
 # 0.4.0
 
 - feat: Update imports to be relative
