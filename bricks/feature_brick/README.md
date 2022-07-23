@@ -1,6 +1,6 @@
 # Feature Brick
 
-A brick to create a feature using best practices and your state management of choice! Supports Bloc, Cubit, Provider, Riverpod, None.
+A brick to create a feature and tests using best practices and your state management of choice! Supports Bloc, Cubit, Provider, Riverpod, None.
 
 ## How to use 🚀
 
@@ -17,6 +17,8 @@ mason make feature_brick --feature_name login --state_management bloc
 | `use_equatable`    | Use the equatable package       | true    | `boolean` | true        | Using bloc/cubit |
 
 ## Outputs 📦
+
+See [feature_brick_tests](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/feature_brick_tests) for tests output
 
 ```
 --feature_name login --state_management bloc
