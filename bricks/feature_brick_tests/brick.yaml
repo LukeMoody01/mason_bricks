@@ -1,7 +1,7 @@
 name: feature_brick_tests
-description: A supporting brick for feature_brick
-
+description: A supporting brick for feature_brick that creates tests with 100% coverage
 version: 0.0.1
+repository: https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/feature_brick_tests
 
 environment:
   mason: ">=0.1.0-dev.26 <0.1.0"

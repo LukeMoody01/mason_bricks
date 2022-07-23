@@ -16,19 +16,21 @@ A collection of bricks that enable developers to be more productive when writing
 
 ## Bricks 🧱
 
-| Brick                                                                | Description                                                                                                              | Version |
-| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------- |
-| [model](https://brickhub.dev/bricks/model/0.3.7)                     | A brick to create your model with properties and all the supporting methods, copyWith, to/from json, equatable and more! | 0.3.7   |
-| [feature_brick](https://brickhub.dev/bricks/feature_brick/0.4.0)     | A brick to create a feature using best practices and your state management of choice!                                    | 0.4.0   |
-| [app_ui](https://brickhub.dev/bricks/app_ui/0.0.4)                   | A brick to create your UI package that holds all your app's Colors, Typography, Layout, Theme, and more!                 | 0.0.4   |
-| [service](https://brickhub.dev/bricks/service/0.0.4)                 | A brick to create your service and interface with your defined methods. With optional singleton handling!                | 0.0.4   |
-| [service_package](https://brickhub.dev/bricks/service_package/0.0.4) | A brick to create your service package including methods, models, tests, and more!                                       | 0.0.4   |
-| In the works...                                                      | In the works...                                                                                                          | N/A     |
+| Brick                                                                | Description                                                                                                                   | Version |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------- |
+| [model](https://brickhub.dev/bricks/model/0.3.7)                     | A brick to create your model with properties and all the supporting methods, copyWith, to/from json, equatable and more!      | 0.3.7   |
+| [feature_brick](https://brickhub.dev/bricks/feature_brick/0.4.0)     | A brick to create a feature using best practices and your state management of choice!                                         | 0.5.0   |
+| [feature_brick_tests]                                                | A supporting brick to create your features tests with 100% coverage using best practices and your state management of choice! | 0.0.1   |
+| [app_ui](https://brickhub.dev/bricks/app_ui/0.0.4)                   | A brick to create your UI package that holds all your app's Colors, Typography, Layout, Theme, and more!                      | 0.0.4   |
+| [service](https://brickhub.dev/bricks/service/0.0.4)                 | A brick to create your service and interface with your defined methods. With optional singleton handling!                     | 0.0.4   |
+| [service_package](https://brickhub.dev/bricks/service_package/0.0.4) | A brick to create your service package including methods, models, tests, and more!                                            | 0.0.4   |
+| In the works...                                                      | In the works...                                                                                                               | N/A     |
 
 ## Documentation
 
 - [Model](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/model)
 - [Feature Brick](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/feature_brick)
+- [Feature Brick](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/feature_brick_tests)
 - [App UI](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/app_ui)
 - [Service](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/service)
 - [Service Package](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/service_package)
