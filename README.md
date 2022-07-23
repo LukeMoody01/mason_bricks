@@ -30,7 +30,7 @@ A collection of bricks that enable developers to be more productive when writing
 
 - [Model](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/model)
 - [Feature Brick](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/feature_brick)
-- [Feature Brick](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/feature_brick_tests)
+- [Feature Brick Tests](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/feature_brick_tests)
 - [App UI](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/app_ui)
 - [Service](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/service)
 - [Service Package](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/service_package)
