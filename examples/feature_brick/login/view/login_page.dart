@@ -7,7 +7,7 @@ import '../widgets/login_body.dart';
 /// {@endtemplate}
 class LoginPage extends StatelessWidget {
   /// {@macro login_page}
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   /// The static route for LoginPage
   static Route<dynamic> route() {
@@ -30,7 +30,7 @@ class LoginPage extends StatelessWidget {
 /// {@endtemplate}
 class LoginView extends StatelessWidget {
   /// {@macro login_view}
-  const LoginView({Key? key}) : super(key: key);
+  const LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {

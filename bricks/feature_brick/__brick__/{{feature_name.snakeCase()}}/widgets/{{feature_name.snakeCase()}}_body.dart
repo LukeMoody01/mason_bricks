@@ -11,7 +11,7 @@ import 'package:{{{fullPath}}}/provider/provider.dart';{{/isRiverpod}}
 /// {@endtemplate}
 class {{feature_name.pascalCase()}}Body {{#isBloc}}extends StatelessWidget{{/isBloc}}{{#isCubit}}extends StatelessWidget{{/isCubit}}{{#isProvider}}extends StatelessWidget{{/isProvider}}{{#isNone}}extends StatelessWidget{{/isNone}}{{#isRiverpod}}extends ConsumerWidget{{/isRiverpod}} {
   /// {@macro {{feature_name.snakeCase()}}_body}
-  const {{feature_name.pascalCase()}}Body({Key? key}) : super(key: key);
+  const {{feature_name.pascalCase()}}Body({super.key});
 {{#isBloc}}
   @override
   Widget build(BuildContext context) {
