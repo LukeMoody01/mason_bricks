@@ -36,9 +36,8 @@ class {{feature_name.pascalCase()}}Page extends StatelessWidget {
   } {{/isCubit}} {{#isProvider}}
   @override
   Widget build(BuildContext context) {
-    return Provider(
-      create: (context) =>
-          ChangeNotifierProvider(create: (_) => {{feature_name.pascalCase()}}Notifier()),
+    return ChangeNotifierProvider(
+      create: (context) => {{feature_name.pascalCase()}}Notifier(),
       child: const Scaffold(
         body: {{feature_name.pascalCase()}}View(),
       ),
