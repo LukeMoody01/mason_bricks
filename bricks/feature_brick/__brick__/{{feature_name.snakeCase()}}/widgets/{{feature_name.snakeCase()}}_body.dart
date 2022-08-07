@@ -17,7 +17,7 @@ class {{feature_name.pascalCase()}}Body {{#isBloc}}extends StatelessWidget{{/isB
   Widget build(BuildContext context) {
     return BlocBuilder<{{feature_name.pascalCase()}}Bloc, {{feature_name.pascalCase()}}State>(
       builder: (context, state) {
-        return Text(state.customProperty);
+        return Center(child: Text(state.customProperty));
       },
     );
   }{{/isBloc}}{{#isCubit}}
@@ -25,7 +25,7 @@ class {{feature_name.pascalCase()}}Body {{#isBloc}}extends StatelessWidget{{/isB
   Widget build(BuildContext context) {
     return BlocBuilder<{{feature_name.pascalCase()}}Cubit, {{feature_name.pascalCase()}}State>(
       builder: (context, state) {
-        return Text(state.customProperty);
+        return Center(child: Text(state.customProperty));
       },
     );
   }{{/isCubit}}{{#isProvider}}
@@ -33,7 +33,7 @@ class {{feature_name.pascalCase()}}Body {{#isBloc}}extends StatelessWidget{{/isB
   Widget build(BuildContext context) {
     return Consumer<{{feature_name.pascalCase()}}Notifier>(
       builder: (context, state, child) {
-        return Text(state.count.toString());
+        return Center(child: Text(state.count.toString()));
       },
     );
   }{{/isProvider}}{{#isRiverpod}}
@@ -44,6 +44,6 @@ class {{feature_name.pascalCase()}}Body {{#isBloc}}extends StatelessWidget{{/isB
   }{{/isRiverpod}}{{#isNone}}
   @override
   Widget build(BuildContext context) {
-    return const Text('{{feature_name.pascalCase()}}Page');
+    return const Center(child:Text('{{feature_name.pascalCase()}}Page'));
   }{{/isNone}}
 }
