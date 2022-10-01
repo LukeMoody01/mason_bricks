@@ -1,3 +1,7 @@
+# 0.6.0
+
+- 🎉: Update key parameters to use dart 2.17 Super Initializers
+
 # 0.5.1
 
 - 🐛: Provider State Management gives a "Could not find the correct Provider<LoginNotifier> above this Consumer<LoginNotifier> Widget" error

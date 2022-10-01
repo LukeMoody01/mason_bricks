@@ -8,7 +8,7 @@ import '../bloc/bloc.dart';
 /// {@endtemplate}
 class LoginBody extends StatelessWidget {
   /// {@macro login_body}
-  const LoginBody({Key? key}) : super(key: key);
+  const LoginBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,5 +17,5 @@ class LoginBody extends StatelessWidget {
         return Text(state.customProperty);
       },
     );
-  }   
+  }
 }

@@ -2,6 +2,8 @@
 
 A brick to create a feature and tests using best practices and your state management of choice! Supports Bloc, Cubit, Provider, Riverpod, None.
 
+Note: Since version 0.6.0, the brick now uses Super Initializers for features widgets. If you are not using dart 2.17, use the below versions.
+
 ## How to use 🚀
 
 ```
