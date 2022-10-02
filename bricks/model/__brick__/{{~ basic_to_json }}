@@ -1,0 +1,4 @@
+/// Creates a Json map from a {{model_name.pascalCase()}}
+Map<String, dynamic> toJson({{model_name.pascalCase()}} instance) => <String, dynamic>{ {{#properties}}
+      '{{name}}': instance.{{name}},{{/properties}}
+    };

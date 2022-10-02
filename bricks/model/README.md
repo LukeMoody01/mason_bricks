@@ -7,23 +7,22 @@ This brick supports custom types and custom lists!
 ## How to use 🚀
 
 ```
-mason make model --model_name user --use_copywith true --use_equatable true --use_json true
+mason make model --model_name user --additionals "['copyWith', 'json', 'equatable']" --style basic
 ```
 
 ## Variables ✨
 
-| Variable         | Description                      | Default | Type      |
-| ---------------- | -------------------------------- | ------- | --------- |
-| `model_name`     | The name of the model            | model   | `string`  |
-| `use_copywith`   | Create copyWith method           | true    | `boolean` |
-| `use_equatable`  | Creates the equatable overide    | true    | `boolean` |
-| `use_json`       | Creates the from/to json methods | true    | `boolean` |
-| `add_properties` | Add properties                   | true    | `boolean` |
+| Variable         | Description                                                | Default                                   | Type      |
+| ---------------- | ---------------------------------------------------------- | ----------------------------------------- | --------- |
+| `model_name`     | The name of the model                                      | model                                     | `string`  |
+| `additionals`    | The additionals methods/extensions you can have on a model | [copyWith, json, equatable]               | `array`   |
+| `style`          | The style of model                                         | basic (basic, json_serializable, freezed) | `enum`    |
+| `add_properties` | Add properties                                             | true                                      | `boolean` |
 
 ## Outputs 📦
 
 ```
---model_name user --use_copywith true --use_equatable true --use_json true
+--model_name user --additionals [copyWith, json, equatable]
 ├── user.dart
 ├── user.g.dart
 └── ...

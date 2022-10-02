@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:mason/mason.dart';
 
 final dataTypes = [
@@ -15,13 +17,43 @@ final dataTypes = [
 
 void run(HookContext context) {
   final logger = context.logger;
+  final additionals = context.vars['additionals'];
+  final model_style = context.vars['style'] as String;
+  final vars = {
+    ...context.vars,
+    'use_copywith': additionals.contains('copyWith'),
+    'use_json': additionals.contains('json'),
+    'use_equatable': additionals.contains('equatable'),
+    'use_none': model_style == 'basic',
+    'use_serializable': model_style == 'json_serializable',
+    'use_freezed': model_style == 'freezed',
+  };
+
+  // As the post_gen has the option to run build_runner, we make this check
+  // beforehand to make sure we are in the lib directory
+  if (model_style == 'freezed') {
+    final directory = Directory.current.path;
+    List<String> folders;
+
+    if (Platform.isWindows) {
+      folders = directory.split(r'\').toList();
+    } else {
+      folders = directory.split('/').toList();
+    }
+    final libIndex = folders.indexWhere((folder) => folder == 'lib');
+
+    if (libIndex == -1) {
+      throw Exception(
+          'If you are using freezed, the output directory should be inside the lib folder.');
+    }
+  }
 
   if (!logger.confirm(
     '? Do you want to add properties to your model?',
     defaultValue: true,
   )) {
     context.vars = {
-      ...context.vars,
+      ...vars,
       'hasProperties': false,
     };
     return;
@@ -66,7 +98,7 @@ void run(HookContext context) {
     });
   }
   context.vars = {
-    ...context.vars,
+    ...vars,
     'properties': properties,
     'hasProperties': properties.isNotEmpty,
   };

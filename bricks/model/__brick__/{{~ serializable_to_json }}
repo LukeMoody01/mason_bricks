@@ -1,0 +1,2 @@
+/// Creates a Json map from a {{model_name.pascalCase()}}
+Map<String, dynamic> toJson() => _${{model_name.pascalCase()}}ToJson(this);
