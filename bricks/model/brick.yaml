@@ -9,7 +9,7 @@ vars:
     type: string
     description: The model name
     prompt: What is the models name?
-  additional:
+  additionals:
     type: array
     default: [copyWith, json, equatable]
     description: The additional methods/extensions you can have on a model
