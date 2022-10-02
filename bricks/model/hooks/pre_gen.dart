@@ -17,8 +17,17 @@ final dataTypes = [
 
 void run(HookContext context) {
   final logger = context.logger;
-  final vars = context.vars;
-  final model_style = vars['style'] as String;
+  final additionals = context.vars['additional'] as List;
+  final model_style = context.vars['style'] as String;
+  final vars = {
+    ...context.vars,
+    'use_copywith': additionals.contains('copyWith'),
+    'use_json': additionals.contains('json'),
+    'use_equatable': additionals.contains('equatable'),
+    'use_none': model_style == 'basic',
+    'use_serializable': model_style == 'json_serializable',
+    'use_freezed': model_style == 'freezed',
+  };
 
   // As the post_gen has the option to run build_runner, we make this check
   // beforehand to make sure we are in the lib directory
@@ -92,9 +101,6 @@ void run(HookContext context) {
     ...vars,
     'properties': properties,
     'hasProperties': properties.isNotEmpty,
-    'use_none': model_style == 'basic',
-    'use_serializable': model_style == 'json_serializable',
-    'use_freezed': model_style == 'freezed',
   };
 }
 
