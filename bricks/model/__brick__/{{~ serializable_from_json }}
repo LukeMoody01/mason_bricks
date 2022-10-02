@@ -1,0 +1,2 @@
+/// Creates a {{model_name.pascalCase()}} from Json map
+factory {{model_name.pascalCase()}}.fromJson(Map<String, dynamic> data) => _${{model_name.pascalCase()}}FromJson(data);

@@ -1,0 +1,26 @@
+{{#use_equatable}}import 'package:equatable/equatable.dart';{{/use_equatable}}
+import 'package:json_annotation/json_annotation.dart';
+
+part '{{model_name.snakeCase()}}.g.dart';
+
+/// {@template {{{model_name.snakeCase()}}}}
+/// {{model_name.pascalCase()}} description
+/// {@endtemplate}
+@JsonSerializable()
+class {{model_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/use_equatable}} {
+  /// {@macro {{{model_name.snakeCase()}}}}
+  const {{model_name.pascalCase()}}({{#hasProperties}}{ {{#properties}}
+    required this.{{name}},{{/properties}}
+  }{{/hasProperties}});
+{{#use_json}}
+  {{> serializable_from_json }}{{/use_json}}
+{{#properties}}
+  /// A description for {{name}}
+  final {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{name}};
+{{/properties}}{{#use_copywith}}
+  {{> copy_with }}{{/use_copywith}}
+{{#use_equatable}}
+  {{> equatable_props }}{{/use_equatable}}
+{{#use_json}}
+  {{> serializable_to_json }}{{/use_json}}
+}

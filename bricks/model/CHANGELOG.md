@@ -1,3 +1,11 @@
+# 0.4.0
+
+- feat: Allow models to have different styles (basic, json_serializable, freezed)
+
+- cleanup: Make use of partials for better maintainability
+
+- Thanks to @LosDanieloss for his PR addressing freezed support and laying out the initial work for it!
+
 # 0.3.7
 
 - feat: Change model format to split on ' ' instead of '/' making it easier for developers to type properties
@@ -12,7 +20,7 @@
 
 # 0.3.4
 
-- fix: Allow no propreties to be added without errors
+- fix: Allow no properties to be added without errors
 
 # 0.3.3
 

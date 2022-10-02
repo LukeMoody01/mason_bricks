@@ -12,13 +12,14 @@ mason make model --model_name user --use_copywith true --use_equatable true --us
 
 ## Variables ✨
 
-| Variable         | Description                      | Default | Type      |
-| ---------------- | -------------------------------- | ------- | --------- |
-| `model_name`     | The name of the model            | model   | `string`  |
-| `use_copywith`   | Create copyWith method           | true    | `boolean` |
-| `use_equatable`  | Creates the equatable overide    | true    | `boolean` |
-| `use_json`       | Creates the from/to json methods | true    | `boolean` |
-| `add_properties` | Add properties                   | true    | `boolean` |
+| Variable         | Description                      | Default                                   | Type      |
+| ---------------- | -------------------------------- | ----------------------------------------- | --------- |
+| `model_name`     | The name of the model            | model                                     | `string`  |
+| `use_copywith`   | Create copyWith method           | true                                      | `boolean` |
+| `use_equatable`  | Creates the equatable override   | true                                      | `boolean` |
+| `use_json`       | Creates the from/to json methods | true                                      | `boolean` |
+| `style`          | The style of model               | basic (basic, json_serializable, freezed) | `enum`    |
+| `add_properties` | Add properties                   | true                                      | `boolean` |
 
 ## Outputs 📦
 

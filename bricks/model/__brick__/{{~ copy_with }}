@@ -1,0 +1,8 @@
+/// Creates a copy of the current {{model_name.pascalCase()}} with property changes
+{{model_name.pascalCase()}} copyWith({{#hasProperties}}{ {{#properties}}
+  {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}? {{name}},{{/properties}}
+}{{/hasProperties}}) {
+  return {{model_name.pascalCase()}}({{#properties}}
+    {{name}}: {{name}} ?? this.{{name}},{{/properties}}
+  );
+}

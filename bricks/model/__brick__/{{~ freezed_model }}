@@ -1,0 +1,17 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part '{{model_name.snakeCase()}}.freezed.dart';
+{{#use_json}}part '{{model_name.snakeCase()}}.g.dart';{{/use_json}}
+
+/// {@template {{{model_name.snakeCase()}}}}
+/// {{model_name.pascalCase()}} description
+/// {@endtemplate}
+@freezed
+class {{model_name.pascalCase()}} with _${{model_name.pascalCase()}} {
+  /// {@macro {{{model_name.snakeCase()}}}}
+  const factory {{model_name.pascalCase()}}({{#hasProperties}}{ {{#properties}}
+    required {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{name}},{{/properties}}
+  }{{/hasProperties}}) = _{{model_name.pascalCase()}};
+  {{#use_json}}
+  {{> serializable_from_json }}{{/use_json}}
+}
