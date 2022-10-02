@@ -18,7 +18,7 @@ A collection of bricks that enable developers to be more productive when writing
 
 | Brick                                                                | Description                                                                                                                   | Version |
 | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------- |
-| [model](https://brickhub.dev/bricks/model/0.4.0)                     | A brick to create your model with properties and all the supporting methods, copyWith, to/from json, equatable and more!      | 0.4.0   |
+| [model](https://brickhub.dev/bricks/model/0.4.1)                     | A brick to create your model with properties and all the supporting methods, copyWith, to/from json, equatable and more!      | 0.4.1   |
 | [feature_brick](https://brickhub.dev/bricks/feature_brick/0.6.0)     | A brick to create a feature using best practices and your state management of choice!                                         | 0.6.0   |
 | feature_brick_tests                                                  | A supporting brick to create your features tests with 100% coverage using best practices and your state management of choice! | 0.0.1   |
 | [app_ui](https://brickhub.dev/bricks/app_ui/0.0.4)                   | A brick to create your UI package that holds all your app's Colors, Typography, Layout, Theme, and more!                      | 0.0.4   |

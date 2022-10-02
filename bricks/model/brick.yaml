@@ -1,7 +1,7 @@
 name: model
 description: A brick to create your model with properties and all the supporting methods, copyWith, to/from json, equatable and more!
-version: 0.4.0
-repository: https://github.com/LukeMoody01/mason_bricks/tree/main/bricks/model
+version: 0.4.1
+repository: https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/model
 
 vars:
   model_name:
@@ -11,7 +11,7 @@ vars:
     prompt: What is the models name?
   additionals:
     type: array
-    default: [copyWith, json, equatable]
+    defaults: [copyWith, json, equatable]
     description: The additional methods/extensions you can have on a model
     prompt: What additional methods/extensions should the model have?
     values:

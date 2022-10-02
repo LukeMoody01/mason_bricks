@@ -1,3 +1,9 @@
+# 0.4.1
+
+- fix: Update brick.yaml with `defaults` instead of `default`
+
+- chore: Small documentation changes
+
 # 0.4.0
 
 - feat: Allow models to have different styles (basic, json_serializable, freezed)

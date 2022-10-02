@@ -7,8 +7,10 @@ This brick supports custom types and custom lists!
 ## How to use 🚀
 
 ```
-mason make model --model_name user --additionals "['copyWith', 'json', 'equatable']" --style basic
+mason make model --model_name user --additionals "[copyWith, json, equatable]" --style basic
 ```
+
+Then add your properties! (Optional)
 
 ## Variables ✨
 
@@ -22,7 +24,7 @@ mason make model --model_name user --additionals "['copyWith', 'json', 'equatabl
 ## Outputs 📦
 
 ```
---model_name user --additionals [copyWith, json, equatable]
+--model_name user --additionals "[copyWith, json, equatable]" --style json_serializable
 ├── user.dart
 ├── user.g.dart
 └── ...
@@ -30,12 +32,14 @@ mason make model --model_name user --additionals "['copyWith', 'json', 'equatabl
 
 ```dart
 import 'package:equatable/equatable.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'user.g.dart';
 
 /// {@template user}
 /// User description
 /// {@endtemplate}
+@JsonSerializable()
 class User extends Equatable {
   /// {@macro user}
   const User({
