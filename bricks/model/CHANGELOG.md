@@ -2,6 +2,8 @@
 
 - feat: Allow models to have different styles (basic, json_serializable, freezed)
 
+- feat: Improve API for selecting additional methods/extensions
+
 - cleanup: Make use of partials for better maintainability
 
 - Thanks to @LosDanieloss for his PR addressing freezed support and laying out the initial work for it!

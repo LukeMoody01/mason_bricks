@@ -17,7 +17,7 @@ final dataTypes = [
 
 void run(HookContext context) {
   final logger = context.logger;
-  final additionals = context.vars['additional'] as List;
+  final additionals = context.vars['additional'];
   final model_style = context.vars['style'] as String;
   final vars = {
     ...context.vars,
