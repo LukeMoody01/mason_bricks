@@ -1,4 +1,4 @@
 /// Creates a {{model_name.pascalCase()}} from Json map
-{{model_name.pascalCase()}} fromJson(Map<String, dynamic> json) => {{model_name.pascalCase()}}({{#properties}}
+factory {{model_name.pascalCase()}}.fromJson(Map<String, dynamic> json) => {{model_name.pascalCase()}}({{#properties}}
       {{name}}: {{#isCustomList}}(json['{{name}}'] as List<dynamic>).map((dynamic e) => {{customListType}}.fromJson(e as Map<String, dynamic>)).toList(){{/isCustomList}}{{^isCustomList}}{{#isCustomDataType}}{{type}}.fromJson(json['{{name}}'] as Map<String, dynamic>){{/isCustomDataType}}{{^isCustomDataType}}json['{{name}}'] as {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}{{/isCustomDataType}}{{/isCustomList}},{{/properties}}
     );

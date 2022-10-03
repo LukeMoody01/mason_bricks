@@ -1,5 +1,5 @@
 {{#use_equatable}}import 'package:equatable/equatable.dart';{{/use_equatable}}
-
+{{> relations }}
 /// {@template {{{model_name.snakeCase()}}}}
 /// {{model_name.pascalCase()}} description
 /// {@endtemplate}

@@ -1,5 +1,6 @@
 {{#use_equatable}}import 'package:equatable/equatable.dart';{{/use_equatable}}
 import 'package:json_annotation/json_annotation.dart';
+{{> relations }}
 
 part '{{model_name.snakeCase()}}.g.dart';
 

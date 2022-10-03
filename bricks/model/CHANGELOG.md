@@ -1,3 +1,11 @@
+# 0.5.0
+
+- feat: Allow for seeding/configs for a whole model including the properties
+
+- feat: Relate models to generate their imports (Currently config only)
+
+- chore: Update documentation with information about configs and how it differs from regular command line generation
+
 # 0.4.1
 
 - fix: Update brick.yaml with `defaults` instead of `default`

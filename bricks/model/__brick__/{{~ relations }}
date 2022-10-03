@@ -1,0 +1,2 @@
+{{#hasRelations}}{{#relations}}import 'package:{{{fullPath}}}{{name.snakeCase()}}.dart';
+{{/relations}}{{/hasRelations}}
