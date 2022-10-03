@@ -1,0 +1,16 @@
+{
+  "model_name": "user",
+  "additionals": ["copyWith", "json", "equatable"],
+  "style": "json_serializable",
+  "relations": [{ "name": "user" }],
+  "properties": [
+    { "name": "firstName", "type": "String" },
+    { "name": "lastName", "type": "String" },
+    { "name": "age", "type": "int" },
+    { "name": "isHappy", "type": "bool" },
+    { "name": "favouriteNumber", "type": "int" },
+    { "name": "nicknames", "type": "List<String>" },
+    { "name": "countriesVisited", "type": "List<String>" },
+    { "name": "friends", "type": "List<User>" }
+  ]
+}

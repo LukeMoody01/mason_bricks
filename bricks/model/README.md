@@ -2,24 +2,65 @@
 
 A brick to create your model with properties and all the supporting methods, copyWith, to/from json, equatable and more!
 
-This brick supports custom types and custom lists!
+This brick now supports configs! See below for more info.
+
+## Table of Contents
+
+- [How to use](#how-to-use-🚀)
+  - [Model from Command Line](#command-line)
+  - [Model from Config](#config)
+- [Outputs](#outputs)
 
 ## How to use 🚀
 
-```
-mason make model --model_name user --additionals "[copyWith, json, equatable]" --style basic
-```
+### Command Line
+
+`mason make model --model_name user --additionals "[copyWith, json, equatable]" --style basic`
 
 Then add your properties! (Optional)
 
-## Variables ✨
+## Variables for the Command Line ✨
 
-| Variable         | Description                                                | Default                                   | Type      |
-| ---------------- | ---------------------------------------------------------- | ----------------------------------------- | --------- |
-| `model_name`     | The name of the model                                      | model                                     | `string`  |
-| `additionals`    | The additionals methods/extensions you can have on a model | [copyWith, json, equatable]               | `array`   |
-| `style`          | The style of model                                         | basic (basic, json_serializable, freezed) | `enum`    |
-| `add_properties` | Add properties                                             | true                                      | `boolean` |
+| Variable      | Description                                                | Default                                   | Type     |
+| ------------- | ---------------------------------------------------------- | ----------------------------------------- | -------- |
+| `model_name`  | The name of the model                                      | model                                     | `string` |
+| `additionals` | The additionals methods/extensions you can have on a model | [copyWith, json, equatable]               | `array`  |
+| `style`       | The style of model                                         | basic (basic, json_serializable, freezed) | `enum`   |
+
+### Config
+
+`mason make model -c model_config.json`
+
+[Example Config](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/model/model_config_template.json):
+
+```json
+{
+  "model_name": "super user",
+  "additionals": ["copyWith", "json", "equatable"],
+  "style": "json_serializable", // Could be basic, json_serializable, or freezed
+  "relations": [{ "name": "user" }], // Use this when your model depends on other models
+  "properties": [
+    { "name": "firstName", "type": "String" },
+    { "name": "lastName", "type": "String" },
+    { "name": "age", "type": "int" },
+    { "name": "isHappy", "type": "bool" },
+    { "name": "favouriteNumber", "type": "int" },
+    { "name": "nicknames", "type": "List<String>" },
+    { "name": "countriesVisited", "type": "List<String>" },
+    { "name": "friends", "type": "List<User>" } // We will need `relations` because of this model `List<User>`
+  ]
+}
+```
+
+## Variables for a Config ✨
+
+| Variable      | Description                                                                    | Type     |
+| ------------- | ------------------------------------------------------------------------------ | -------- |
+| `model_name`  | The name of the model                                                          | `string` |
+| `additionals` | The additionals methods/extensions you can have on a model                     | `array`  |
+| `style`       | The style of model                                                             | `enum`   |
+| `relations`   | The models that the current model will depend on and will need the imports for | `array`  |
+| `properties`  | The properties for the model                                                   | `array`  |
 
 ## Outputs 📦
 

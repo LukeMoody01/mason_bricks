@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-
+{{> relations }}
+ 
 part '{{model_name.snakeCase()}}.freezed.dart';
 {{#use_json}}part '{{model_name.snakeCase()}}.g.dart';{{/use_json}}
 

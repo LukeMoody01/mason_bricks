@@ -5,3 +5,4 @@ environment:
 
 dependencies:
   mason: ^0.1.0-dev
+  yaml: ^3.1.1
