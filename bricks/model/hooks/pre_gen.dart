@@ -58,10 +58,7 @@ Future<void> run(HookContext context) async {
     for (final property in seededProperties) {
       _addProperty(
         properties,
-        Property(
-          name: property['name'],
-          type: property['type'],
-        ),
+        Property.fromMap(property),
       );
     }
   } else if (logger.confirm(
@@ -122,7 +119,14 @@ void _addProperties(Logger logger, List<Map<String, dynamic>> properties) {
     final splitProperty = property.split(' ');
     final propertyType = splitProperty[0];
     final propertyName = splitProperty[1];
-    _addProperty(properties, Property(name: propertyName, type: propertyType));
+    _addProperty(
+      properties,
+      Property(
+        name: propertyName,
+        type: propertyType,
+        isNullable: propertyType.endsWith("?"),
+      ),
+    );
   }
 }
 
@@ -134,10 +138,12 @@ void _addProperty(
   final hasSpecial = property.type.toLowerCase().contains('<') ||
       property.type.toLowerCase().contains('>');
   final listProperties = _getCustomListProperties(hasSpecial, property.type);
-  final isCustomDataType = !dataTypes.contains(property.type) && !hasSpecial;
+  final isCustomDataType =
+      !dataTypes.contains(property.type.cleaned) && !hasSpecial;
   properties.add({
     'name': property.name,
     'type': property.type,
+    'isNullable': property.isNullable,
     'hasSpecial': hasSpecial,
     'isCustomDataType': isCustomDataType,
     ...listProperties,
@@ -226,7 +232,7 @@ Map<String, dynamic> _getCustomListProperties(
   final startIndex = propertyType.indexOf('<');
   final endIndex = propertyType.indexOf('>');
   final listType = propertyType.substring(startIndex + 1, endIndex).trim();
-  if (dataTypes.contains(listType)) {
+  if (dataTypes.contains(listType.cleaned)) {
     return {
       'isCustomList': false,
     };
@@ -241,16 +247,18 @@ class Property {
   const Property({
     required this.name,
     required this.type,
+    this.isNullable = false,
   });
 
   final String name;
   final String type;
+  final bool isNullable;
 
   factory Property.fromMap(Map<String, dynamic> map) {
     return Property(
-      name: map['name'],
-      type: map['type'],
-    );
+        name: map['name'],
+        type: map['type'],
+        isNullable: (map['type'] as String).endsWith("?"));
   }
 
   factory Property.fromJson(String source) =>
@@ -258,3 +266,14 @@ class Property {
 }
 
 class PubspecNameException implements Exception {}
+
+extension StringX on String {
+  // Property type with null operator stripped
+  String get cleaned {
+    if (this.endsWith("?")) {
+      return this.substring(0, length - 1);
+    }
+
+    return this;
+  }
+}

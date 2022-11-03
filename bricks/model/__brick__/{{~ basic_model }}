@@ -6,7 +6,7 @@
 class {{model_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/use_equatable}} {
   /// {@macro {{{model_name.snakeCase()}}}}
   const {{model_name.pascalCase()}}({{#hasProperties}}{ {{#properties}}
-    required this.{{name}},{{/properties}}
+    {{^isNullable}}required {{/isNullable}}this.{{name}},{{/properties}}
   }{{/hasProperties}});
 {{#use_json}}
   {{> basic_from_json }}{{/use_json}}
