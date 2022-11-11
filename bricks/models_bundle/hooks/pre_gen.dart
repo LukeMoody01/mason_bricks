@@ -18,7 +18,7 @@ Future<void> run(HookContext context) async {
   final logger = context.logger;
   final models = context.vars['models'];
   final generator = await MasonGenerator.fromBrick(
-    Brick.version(name: 'model', version: '0.5.0'),
+    Brick.version(name: 'model', version: '0.5.1'),
   );
 
   Map<String, dynamic> preGenVars = {};
