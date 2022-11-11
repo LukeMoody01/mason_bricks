@@ -11,7 +11,9 @@
 <!--- Put an `x` in all the boxes that apply: -->
 
 - [ ] model
+- [ ] models_bundle
 - [ ] feature_brick
+- [ ] feature_brick_tests
 - [ ] app_ui
 - [ ] service
 - [ ] service_package

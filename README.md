@@ -19,6 +19,7 @@ A collection of bricks that enable developers to be more productive when writing
 | Brick                                                          | Description                                                                                                                   | Version |
 | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------- |
 | [model](https://brickhub.dev/bricks/model)                     | A brick to create your model with properties and all the supporting methods, copyWith, to/from json, equatable and more!      | 0.5.1   |
+| [models_bundle](https://brickhub.dev/bricks/models_bundle)     | A brick to create multiple models including their properties and all the supporting methods/extensions!                       | 0.0.1   |
 | [feature_brick](https://brickhub.dev/bricks/feature_brick)     | A brick to create a feature using best practices and your state management of choice!                                         | 0.6.0   |
 | feature_brick_tests                                            | A supporting brick to create your features tests with 100% coverage using best practices and your state management of choice! | 0.0.1   |
 | [app_ui](https://brickhub.dev/bricks/app_ui)                   | A brick to create your UI package that holds all your app's Colors, Typography, Layout, Theme, and more!                      | 0.0.4   |
@@ -29,6 +30,7 @@ A collection of bricks that enable developers to be more productive when writing
 ## Documentation
 
 - [Model](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/model)
+- [Models Bundle](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/models_bundle)
 - [Feature Brick](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/feature_brick)
 - [Feature Brick Tests](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/feature_brick_tests)
 - [App UI](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/app_ui)
