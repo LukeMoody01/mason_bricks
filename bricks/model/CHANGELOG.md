@@ -1,3 +1,7 @@
+# 0.5.1
+
+- fix: Update basic_to_json to use current instance instead of passing one through
+
 # 0.5.0
 
 - feat: Allow for seeding/configs for a whole model including the properties
