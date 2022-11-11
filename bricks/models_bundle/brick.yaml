@@ -1,0 +1,4 @@
+name: models_bundle
+description: A brick to create multiple models including their properties and all the supporting methods/extensions!
+version: 0.0.1
+repository: https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/models_bundle

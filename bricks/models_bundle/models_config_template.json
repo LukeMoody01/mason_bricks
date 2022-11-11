@@ -1,0 +1,81 @@
+{
+  "models": [
+    {
+      "model_name": "chat",
+      "additionals": ["copyWith", "json", "equatable"],
+      "style": "json_serializable",
+      "relations": [{ "name": "person" }],
+      "properties": [
+        { "name": "id", "type": "int" },
+        { "name": "message", "type": "String" },
+        { "name": "sentTime", "type": "DateTime" },
+        { "name": "chatImage", "type": "String" },
+        { "name": "isForwarded", "type": "bool" },
+        { "name": "toUsers", "type": "List<Person>" }
+      ]
+    },
+    {
+      "model_name": "person",
+      "additionals": ["copyWith", "json", "equatable"],
+      "style": "json_serializable",
+      "properties": [
+        { "name": "id", "type": "int" },
+        { "name": "firstName", "type": "String" },
+        { "name": "lastName", "type": "String" },
+        { "name": "age", "type": "int" },
+        { "name": "isHappy", "type": "bool" },
+        { "name": "favouriteNumber", "type": "int" },
+        { "name": "nicknames", "type": "List<String>" },
+        { "name": "countriesVisited", "type": "List<String>" },
+        { "name": "organizationId", "type": "String" }
+      ]
+    },
+    {
+      "model_name": "organization",
+      "additionals": ["copyWith", "json", "equatable"],
+      "style": "json_serializable",
+      "relations": [{ "name": "person" }],
+      "properties": [
+        { "name": "id", "type": "int" },
+        { "name": "name", "type": "String" },
+        { "name": "users", "type": "List<Person>" },
+        { "name": "address", "type": "String" }
+      ]
+    },
+    {
+      "model_name": "analyticsDTO",
+      "additionals": ["json", "equatable"],
+      "style": "json_serializable",
+      "properties": [
+        { "name": "id", "type": "int" },
+        { "name": "messagesCount", "type": "int" },
+        { "name": "usersCount", "type": "int" },
+        { "name": "invitationCount", "type": "int" }
+      ]
+    },
+    {
+      "model_name": "inboxItem",
+      "additionals": ["copyWith", "json", "equatable"],
+      "relations": [{ "name": "person" }, { "name": "chat" }],
+      "style": "json_serializable",
+      "properties": [
+        { "name": "id", "type": "int" },
+        { "name": "name", "type": "String" },
+        { "name": "users", "type": "List<Person>" },
+        { "name": "lastMessage", "type": "Chat" }
+      ]
+    },
+    {
+      "model_name": "invitations",
+      "additionals": ["copyWith", "json", "equatable"],
+      "style": "json_serializable",
+      "relations": [{ "name": "person" }],
+      "properties": [
+        { "name": "id", "type": "int" },
+        { "name": "to", "type": "Person" },
+        { "name": "from", "type": "Person" },
+        { "name": "invitationMessage", "type": "String" }
+      ]
+    }
+  ]
+}
