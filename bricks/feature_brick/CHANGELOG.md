@@ -1,3 +1,7 @@
+# 0.6.1
+
+- 🧹: Update naming of generated test methods to match their results
+
 # 0.6.0
 
 - 🎉: Update key parameters to use dart 2.17 Super Initializers

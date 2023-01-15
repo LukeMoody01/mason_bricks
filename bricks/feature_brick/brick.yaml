@@ -1,6 +1,6 @@
 name: feature_brick
 description: A brick to create a feature using best practices and your state management of choice!
-version: 0.5.1
+version: 0.6.1
 repository: https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/feature_brick
 
 vars:
