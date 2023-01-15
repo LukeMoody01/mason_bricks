@@ -8,16 +8,16 @@ void main() {
     group('Custom{{feature_name.pascalCase()}}Event', () {
       test('supports value equality', () {
         expect(
-          const Custom{{feature_name.pascalCase()}}Event(),
-          isNotNull
+          Custom{{feature_name.pascalCase()}}Event(),
+          equals(const Custom{{feature_name.pascalCase()}}Event()),
         );
       });
     });{{/use_equatable}}
     group('constructor', () {
       test('can be instantiated', () {
         expect(
-          Custom{{feature_name.pascalCase()}}Event(),
-          equals(const Custom{{feature_name.pascalCase()}}Event()),
+          const Custom{{feature_name.pascalCase()}}Event(),
+          isNotNull
         );
       });
     });
