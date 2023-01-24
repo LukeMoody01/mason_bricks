@@ -41,12 +41,12 @@ Then add your properties! (Optional)
   "relations": [{ "name": "user" }], // Use this when your model depends on other models
   "properties": [
     { "name": "firstName", "type": "String" },
-    { "name": "lastName", "type": "String" },
+    { "name": "lastName", "type": "String?" },
     { "name": "age", "type": "int" },
     { "name": "isHappy", "type": "bool" },
     { "name": "favouriteNumber", "type": "int" },
     { "name": "nicknames", "type": "List<String>" },
-    { "name": "countriesVisited", "type": "List<String>" },
+    { "name": "countriesVisited", "type": "List<String?>" },
     { "name": "friends", "type": "List<User>" } // We will need `relations` because of this model `List<User>`
   ]
 }

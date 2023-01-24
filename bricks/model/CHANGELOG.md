@@ -1,3 +1,7 @@
+# 0.6.0
+
+- feat: Add Nullable types (@wizlif)
+
 # 0.5.1
 
 - fix: Update basic_to_json to use current instance instead of passing one through
