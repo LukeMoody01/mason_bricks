@@ -24,4 +24,6 @@ class {{model_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/use_equa
   {{> equatable_props }}{{/use_equatable}}
 {{#use_json}}
   {{> serializable_to_json }}{{/use_json}}
+{{#use_tostring}}
+  {{> to_string }}{{/use_tostring}}
 }

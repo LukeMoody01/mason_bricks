@@ -24,7 +24,7 @@ Then add your properties! (Optional)
 | Variable      | Description                                                | Default                                   | Type     |
 | ------------- | ---------------------------------------------------------- | ----------------------------------------- | -------- |
 | `model_name`  | The name of the model                                      | model                                     | `string` |
-| `additionals` | The additionals methods/extensions you can have on a model | [copyWith, json, equatable]               | `array`  |
+| `additionals` | The additionals methods/extensions you can have on a model | [copyWith, json, equatable, toString]     | `array`  |
 | `style`       | The style of model                                         | basic (basic, json_serializable, freezed) | `enum`   |
 
 ### Config
@@ -36,7 +36,7 @@ Then add your properties! (Optional)
 ```json
 {
   "model_name": "super user",
-  "additionals": ["copyWith", "json", "equatable"],
+  "additionals": ["copyWith", "json", "equatable", "toString"],
   "style": "json_serializable", // Could be basic, json_serializable, or freezed
   "relations": [{ "name": "user" }], // Use this when your model depends on other models
   "properties": [
@@ -65,7 +65,7 @@ Then add your properties! (Optional)
 ## Outputs 📦
 
 ```
---model_name user --additionals "[copyWith, json, equatable]" --style json_serializable
+--model_name user --additionals "[copyWith, json, equatable, toString]" --style json_serializable
 ├── user.dart
 ├── user.g.dart
 └── ...
@@ -123,6 +123,10 @@ class User extends Equatable {
 
   /// Creates a Json map from a User
   Map<String, dynamic> toJson() => _$UserToJson(this);
+
+  /// Creates a toString() override for User
+  @override
+  String toString() => 'User(name: $name, familyMembers: $familyMembers, family: $family)';
 }
 
 //user.g.dart
