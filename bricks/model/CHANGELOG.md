@@ -1,3 +1,7 @@
+# 0.6.1
+
+- feat: Added toString() override (@ashishbeck)
+
 # 0.6.0
 
 - feat: Add Nullable types (@wizlif)
