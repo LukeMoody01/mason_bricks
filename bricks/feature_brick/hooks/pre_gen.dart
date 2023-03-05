@@ -44,7 +44,7 @@ Future run(HookContext context) async {
 
     context.vars = {
       ...context.vars,
-      'fullPath': ('$packageName/$featurePath/${context.vars['feature_name']}')
+      'fullPath': ('$packageName/$featurePath/${(context.vars['feature_name'] as String).snakeCase}')
           .replaceAll('//', '/'),
       'isBloc': isBloc,
       'isCubit': isCubit,

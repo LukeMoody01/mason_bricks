@@ -1,3 +1,7 @@
+# 0.6.2
+
+- 🐛: Fix full path variable to make the feature name snake case inside an import
+
 # 0.6.1
 
 - 🧹: Update naming of generated test methods to match their results
