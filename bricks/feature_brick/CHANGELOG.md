@@ -1,6 +1,7 @@
 # 0.6.2
 
 - 🐛: Fix full path variable to make the feature name snake case inside an import
+- 🧹: Abstract Bloc events that extend Equatable will now hold the overridable `props`
 
 # 0.6.1
 
