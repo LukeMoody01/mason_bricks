@@ -29,6 +29,7 @@ Future<void> run(HookContext context) async {
     'use_copywith': additionals.contains('copyWith'),
     'use_json': additionals.contains('json'),
     'use_equatable': additionals.contains('equatable'),
+    'use_tostring': additionals.contains('toString'),
     'use_none': model_style == 'basic',
     'use_serializable': model_style == 'json_serializable',
     'use_freezed': model_style == 'freezed',
@@ -140,14 +141,17 @@ void _addProperty(
   final listProperties = _getCustomListProperties(hasSpecial, property.type);
   final isCustomDataType =
       !dataTypes.contains(property.type.cleaned) && !hasSpecial;
-  properties.add({
-    'name': property.name,
-    'type': property.type,
-    'isNullable': property.isNullable,
-    'hasSpecial': hasSpecial,
-    'isCustomDataType': isCustomDataType,
-    ...listProperties,
-  });
+  properties
+    ..forEach((e) => e['isLastProperty'] = false)
+    ..add({
+      'name': property.name,
+      'type': property.type,
+      'isNullable': property.isNullable,
+      'hasSpecial': hasSpecial,
+      'isCustomDataType': isCustomDataType,
+      'isLastProperty': true,
+      ...listProperties,
+    });
 }
 
 /// Checks to see if the current output directory is in the

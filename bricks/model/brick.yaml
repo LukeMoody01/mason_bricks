@@ -11,13 +11,14 @@ vars:
     prompt: What is the models name?
   additionals:
     type: array
-    defaults: [copyWith, json, equatable]
+    defaults: [copyWith, json, equatable, toString]
     description: The additional methods/extensions you can have on a model
     prompt: What additional methods/extensions should the model have?
     values:
       - copyWith
       - json
       - equatable
+      - toString
   style:
     type: enum
     default: basic
