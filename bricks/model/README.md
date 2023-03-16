@@ -8,6 +8,7 @@ This brick now supports configs! See below for more info.
 
 - [How to use](#how-to-use-🚀)
   - [Model from Command Line](#command-line)
+  - [Models from Json File](#using-a-json-file)
   - [Model from Config](#config)
 - [Outputs](#outputs)
 
@@ -26,6 +27,17 @@ Then add your properties! (Optional)
 | `model_name`  | The name of the model                                      | model                                     | `string` |
 | `additionals` | The additionals methods/extensions you can have on a model | [copyWith, json, equatable, toString]     | `array`  |
 | `style`       | The style of model                                         | basic (basic, json_serializable, freezed) | `enum`   |
+| `jsonFile`    | The location of your json file                             |                                           | `string` |
+
+### Using a Json file
+
+WARNING: You cannot use the -o argument when using a jsonFile.
+
+`mason make model --jsonFile .\pathToYourJsonFile`
+
+[Example Json](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/model/json_file_template.json):
+
+TODO: Currently there is not much error handling when it comes to the JSON files. Please raise a bug if you come across a JSON file that does not work, but should.
 
 ### Config
 
