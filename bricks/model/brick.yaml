@@ -1,6 +1,6 @@
 name: model
 description: A brick to create your model with properties and all the supporting methods, copyWith, to/from json, equatable and more!
-version: 0.6.1
+version: 0.7.1
 repository: https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/model
 
 vars:
@@ -28,3 +28,8 @@ vars:
       - basic
       - json_serializable
       - freezed
+  jsonFile:
+    default: ""
+    type: string
+    description: Creates the model through json
+    prompt: SKIP THIS IF NOT USING A JSON FILE

@@ -1,3 +1,17 @@
+# 0.7.1
+
+- fix: Improvements to working with freezed classes when using a JSON file
+
+# 0.7.0+1
+
+- chore: Documentation updates
+
+# 0.7.0
+
+- feat: Json File parsing and handling
+
+- chore: Major cleanup of model files
+
 # 0.6.1
 
 - feat: Added toString() override (@ashishbeck)
