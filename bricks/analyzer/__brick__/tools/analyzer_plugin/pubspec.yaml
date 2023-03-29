@@ -1,0 +1,13 @@
+name: {{analyzer_name.snakeCase()}}_plugin_loader
+description: This pubspec determines the version of the analyzer plugin to load.
+version: 5.7.0
+
+environment:
+  sdk: ">=2.14.0 <3.0.0"
+
+dependencies:
+  {{analyzer_name.snakeCase()}}:
+    path: ..\..\
+
+dev_dependencies:
+  lints: ^1.0.1

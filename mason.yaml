@@ -1,6 +1,8 @@
 bricks:
   app_ui:
     path: bricks/app_ui
+  analyzer:
+    path: bricks/analyzer
   feature_brick:
     path: bricks/feature_brick
   model:
