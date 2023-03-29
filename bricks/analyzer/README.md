@@ -1,7 +1,7 @@
 # Analyzer
 Introducing Analyzer brick, a powerful foundation for building your personalized Flutter/Dart analyzer package! At present, there is a lack of comprehensive guides or streamlined methods for creating custom analyzers. Analyzer aims to fill that gap by providing a user-friendly base for crafting the perfect analyzer tailored to your team's projects.
 
-Drawing inspiration from the well-known dart-code-analyzer, Analyzer currently offers a lint analyzer, without compromising on functionality. Get started with CustomAnalyzer today and elevate your code analysis experience!
+Drawing inspiration from the well-known dart-code-analyzer, Analyzer currently offers a lint analyzer, without compromising on functionality. Get started with Analyzer today and elevate your code analysis experience!
 
 ## How to use 🚀
 
