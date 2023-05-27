@@ -1,0 +1,14 @@
+name: analyzer
+description: A brick to provide a powerful foundation for building your personalized Flutter/Dart analyzer package!
+version: 0.1.0+2
+repository: https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/analyzer
+
+environment:
+  mason: ">=0.1.0-dev.47 <0.1.0"
+
+vars:
+  analyzer_name:
+    type: string
+    description: The name of you analyzer package
+    default: custom_analyzer
+    prompt: What is your analyzers name?
