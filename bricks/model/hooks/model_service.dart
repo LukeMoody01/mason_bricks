@@ -93,8 +93,9 @@ Please check the variable names of your properties. It should be along the lines
       ..add({
         'name': property.name,
         'type': property.type,
-        'isNullable': property.isNullable,
         'hasSpecial': hasSpecial,
+        'isCamelCase': property.isCamelCase,
+        'isNullable': property.isNullable,
         'isCustomDataType': isCustomDataType,
         'isLastProperty': true,
         ...listProperties,
@@ -193,5 +194,30 @@ Please check the variable names of your properties. It should be along the lines
       'isCustomList': true,
       'customListType': listType,
     };
+  }
+
+  /// Checks if a given string is in CamelCase format.
+  ///
+  /// CamelCase is a naming convention where multiple words are joined together,
+  /// and each word (except the first) begins with a capital letter without any spaces or separators.
+  ///
+  /// [s]: The input string to check for CamelCase format.
+  ///
+  /// Returns `true` if the string follows CamelCase formatting rules,
+  /// otherwise returns `false`.
+  static bool isCamelCase(String s) {
+    if (s != s.toLowerCase() &&
+        s != s.toUpperCase() &&
+        !s.contains("_") &&
+        s
+                .substring(1, s.length - 1)
+                .replaceAll("_", "")
+                .split("")
+                .where((c) => c == c.toUpperCase())
+                .length ==
+            1) {
+      return true;
+    }
+    return false;
   }
 }

@@ -1,3 +1,7 @@
+# 0.8.0
+
+- feat: Force the Dart variable naming convention (camelCase) in models - request from @tarek360
+
 # 0.7.1
 
 - fix: Improvements to working with freezed classes when using a JSON file

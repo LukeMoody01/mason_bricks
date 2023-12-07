@@ -6,13 +6,13 @@
 class {{model_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/use_equatable}} {
   /// {@macro {{{model_name.snakeCase()}}}}
   const {{model_name.pascalCase()}}({{#hasProperties}}{ {{#properties}}
-    {{^isNullable}}required {{/isNullable}}this.{{name}},{{/properties}}
+    {{^isNullable}}required {{/isNullable}}this.{{name.camelCase()}},{{/properties}}
   }{{/hasProperties}});
 {{#use_json}}
   {{> basic_from_json }}{{/use_json}}
 {{#properties}}
-  /// A description for {{name}}
-  final {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{name}};
+  /// A description for {{name.camelCase()}}
+  final {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{name.camelCase()}};
 {{/properties}}{{#use_copywith}}
   {{> copy_with }}{{/use_copywith}}
 {{#use_equatable}}
