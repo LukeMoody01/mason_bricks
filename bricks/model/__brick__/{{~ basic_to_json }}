@@ -1,4 +1,4 @@
 /// Creates a Json map from a {{model_name.pascalCase()}}
 Map<String, dynamic> toJson() => <String, dynamic>{ {{#properties}}
-      '{{name}}': {{name}},{{/properties}}
+      {{#isCamelCase}}'{{name.camelCase()}}'{{/isCamelCase}}{{^isCamelCase}}'{{name}}'{{/isCamelCase}}: {{name.camelCase()}},{{/properties}}
     };

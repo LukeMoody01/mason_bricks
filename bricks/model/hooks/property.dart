@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'model_service.dart';
+
 /// {@template property}
 /// A property for model class
 /// {@endtemplate}
@@ -16,6 +18,17 @@ class Property {
 
   /// The type of the property
   final String type;
+
+  /// A flag to handle cases where the json value is not camel case
+  ///
+  /// Example:
+  /// ```json
+  /// {
+  ///   "eye_color": "black"
+  /// }
+  /// ```
+  /// We would want the model name to be eyeColor with it parsed from eye_color.
+  bool get isCamelCase => ModelService.isCamelCase(name);
 
   /// A flag if the property is nullable
   final bool isNullable;
