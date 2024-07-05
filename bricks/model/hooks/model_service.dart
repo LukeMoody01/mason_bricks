@@ -88,9 +88,16 @@ Please check the variable names of your properties. It should be along the lines
     final listProperties = getCustomListProperties(hasSpecial, property.type);
     final isCustomDataType =
         !DataTypes.values.contains(property.type.cleaned) && !hasSpecial;
+    var index = 0;
+
     properties
-      ..forEach((e) => e['isLastProperty'] = false)
+      ..forEach((e) {
+        e['isLastProperty'] = false;
+        e['index'] = index;
+        index = index + 1;
+      })
       ..add({
+        'index': index,
         'name': property.name,
         'type': property.type,
         'hasSpecial': hasSpecial,
