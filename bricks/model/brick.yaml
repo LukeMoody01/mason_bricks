@@ -28,6 +28,7 @@ vars:
       - basic
       - json_serializable
       - freezed
+      - hive
   jsonFile:
     default: ""
     type: string

@@ -26,6 +26,7 @@ Future<void> run(HookContext context) async {
     'use_none': modelStyle == 'basic',
     'use_serializable': modelStyle == 'json_serializable',
     'use_freezed': modelStyle == 'freezed',
+    'use_hive': modelStyle == 'hive',
     'jsonIndex': ((context.vars['jsonIndex'] as int?) ?? 0),
   };
 

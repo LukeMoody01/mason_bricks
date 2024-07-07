@@ -1,0 +1,21 @@
+import 'package:hive/hive.dart';
+{{> relations }}
+part '{{model_name.snakeCase()}}.g.dart';
+
+/// {@template {{{model_name.snakeCase()}}}}
+/// {{model_name.pascalCase()}} description
+/// {@endtemplate}
+@HiveType(typeId: 0) // TODO: Set your typeId
+class {{model_name.pascalCase()}} extends HiveObject {
+  /// {@macro {{{model_name.snakeCase()}}}}
+  {{model_name.pascalCase()}}({{#hasProperties}}{ {{#properties}}
+    {{^isNullable}}required {{/isNullable}}this.{{name.camelCase()}},{{/properties}}
+  }{{/hasProperties}});
+{{#properties}}
+  /// A description for {{name.camelCase()}}
+  @HiveField({{index}})
+  final {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{name.camelCase()}};
+{{/properties}}{{#use_copywith}}
+  {{> copy_with }}{{/use_copywith}}{{#use_tostring}}
+  {{> to_string }}{{/use_tostring}}
+}

@@ -1,1 +1,1 @@
-{{#use_none}}{{> basic_model }}{{/use_none}}{{#use_serializable}}{{> serializable_model }}{{/use_serializable}}{{#use_freezed}}{{> freezed_model }}{{/use_freezed}}
+{{#use_none}}{{> basic_model }}{{/use_none}}{{#use_serializable}}{{> serializable_model }}{{/use_serializable}}{{#use_freezed}}{{> freezed_model }}{{/use_freezed}}{{#use_hive}}{{> hive_model }}{{/use_hive}}
