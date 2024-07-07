@@ -1,4 +1,8 @@
-# 0.8.0
+# 0.9.1
+
+- chore: Fix CHANGELOG.md versions
+
+# 0.9.0
 
 - feat: Add hive as an option to the model brick (@alloza95)
 
