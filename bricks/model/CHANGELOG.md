@@ -1,5 +1,9 @@
 # 0.8.0
 
+- feat: Add hive as an option to the model brick (@alloza95)
+
+# 0.8.0
+
 - feat: Force the Dart variable naming convention (camelCase) in models - request from @tarek360
 
 # 0.7.1

@@ -6,11 +6,15 @@ This brick now supports configs! See below for more info.
 
 ## Table of Contents
 
-- [How to use](#how-to-use-🚀)
-  - [Model from Command Line](#command-line)
-  - [Models from Json File](#using-a-json-file)
-  - [Model from Config](#config)
-- [Outputs](#outputs)
+- [Model](#model)
+  - [Table of Contents](#table-of-contents)
+  - [How to use 🚀](#how-to-use-)
+    - [Command Line](#command-line)
+  - [Variables for the Command Line ✨](#variables-for-the-command-line-)
+    - [Using a Json file](#using-a-json-file)
+    - [Config](#config)
+  - [Variables for a Config ✨](#variables-for-a-config-)
+  - [Outputs 📦](#outputs-)
 
 ## How to use 🚀
 
@@ -22,12 +26,12 @@ Then add your properties! (Optional)
 
 ## Variables for the Command Line ✨
 
-| Variable      | Description                                                | Default                                   | Type     |
-| ------------- | ---------------------------------------------------------- | ----------------------------------------- | -------- |
-| `model_name`  | The name of the model                                      | model                                     | `string` |
-| `additionals` | The additionals methods/extensions you can have on a model | [copyWith, json, equatable, toString]     | `array`  |
-| `style`       | The style of model                                         | basic (basic, json_serializable, freezed) | `enum`   |
-| `jsonFile`    | The location of your json file                             |                                           | `string` |
+| Variable      | Description                                                | Default                                         | Type     |
+| ------------- | ---------------------------------------------------------- | ----------------------------------------------- | -------- |
+| `model_name`  | The name of the model                                      | model                                           | `string` |
+| `additionals` | The additionals methods/extensions you can have on a model | [copyWith, json, equatable, toString]           | `array`  |
+| `style`       | The style of model                                         | basic (basic, json_serializable, freezed, hive) | `enum`   |
+| `jsonFile`    | The location of your json file                             |                                                 | `string` |
 
 ### Using a Json file
 
